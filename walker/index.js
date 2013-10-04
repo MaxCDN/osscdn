@@ -10,14 +10,15 @@ var github = new (require('github'))({
 });
 
 
+var TESTING;
+
 main();
 
 function main() {
     var root = process.argv[2];
+    TESTING = process.argv[3];
 
-    if(!root) {
-        return console.error('Missing input!');
-    }
+    if(!root) return console.error('Missing input!');
 
     walk(root);
 }
@@ -28,6 +29,12 @@ function walk(root) {
 
         async.map(files, function(file, cb) {
             var d = require('./' + file);
+
+            if(!d.repositories || !d.repositories[0]) {
+                console.warn(d.name + ' is missing a repo!');
+
+                return cb();
+            }
 
             getWatchers(parseGh(d.repositories[0].url), function(err, stars) {
                 if(err) return cb(err);
@@ -46,12 +53,14 @@ function walk(root) {
         }, function(err, d) {
             if(err) return console.error(err);
 
-            console.log(d);
+            console.log(d.filter(id));
         });
     });
 }
 
 function parseGh(url) {
+    if(!url) return {};
+
     var parts = url.split('https://github.com/').join('').split('/');
 
     return {
@@ -61,12 +70,26 @@ function parseGh(url) {
 }
 
 function getWatchers(o, cb) {
-    if(!o.user) return cb('Missing user');
-    if(!o.repo) return cb('Missing repo');
+    if(!o.user) {
+        console.warn('Missing user', o);
+
+        return cb();
+    }
+    if(!o.repo) {
+        console.warn('Missing repo', o);
+
+        return cb();
+    }
+
+    if(TESTING) return cb(null, Math.round(Math.random() * 10000));
 
     github.repos.get(o, function(err, d) {
         if(err) return cb(err);
 
         cb(null, d.watchers_count);
     });
+}
+
+function id(a) {
+    return a;
 }
