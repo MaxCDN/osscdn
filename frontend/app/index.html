@@ -25,9 +25,14 @@
       <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
 
-    <div class="container" ng-controller="InstantSearchController">
+    <header>
+    <h1>osscdn</h1>
+    <div class="motto">The CDN with attitude</div>
+    </header>
+
+    <article class="container" ng-controller="InstantSearchController">
         <div class="search">
-            <input type="text" ng-model="search.name" placeholder="Enter your search terms" />
+            <input type="text" ng-model="search.name" placeholder="Search" />
         </div>
 
         <div class="sorting">
@@ -36,16 +41,21 @@
         </div>
 
         <ul>
-            <li class="slide library" ng-repeat="i in items | filter:search | orderBy:predicate:reverse" ng-click="show=!show">
-                <div class="name">{{i.name}}</div>
+            <li class="library" ng-repeat="i in items | filter:search | orderBy:predicate:reverse" ng-click="show=!show" ng-class="{visible: show}">
+                <div class="displayHelp">Details</div>
+                <h4 class="name">{{i.name}}</h4>
                 <div class="extra" ng-show="show">
-                    <div class="stars">Stars: {{i.stars}}</div>
-                    <div class="hits">Hits: {{i.hits}}</div>
-                    <div class="description">Description: {{i.description}}</div>
+                    <div class="stars"><span class="label">Stars:</span>{{i.stars}}</div>
+                    <div class="hits"><span class="label">Hits:</span>{{i.hits}}</div>
+                    <div class="description"><span class="label">Description:</span>{{i.description}}</div>
                 </div>
             </li>
         </ul>
-    </div>
+    </article>
+
+    <footer>
+        <div>Brought to you by ...</div>
+    </footer>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
