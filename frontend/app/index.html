@@ -42,16 +42,16 @@
 
         <paginator></paginator>
         <ul>
-            <li class="library" ng-repeat="i in items | filter:search | orderBy:predicate:reverse | paginate" ng-click="showExtra=!showExtra" ng-class="{visible: show}">
+            <li class="library" ng-repeat="library in libraries | filter:search | orderBy:predicate:reverse | paginate" ng-click="getLibrary($index, library)" ng-class="{visible: show}">
                 <div class="displayHelp">Details</div>
-                <h4 class="name"><a href="{{i.homepage}}">{{i.name}}</a></h4>
-                <div class="extra" ng-show="showExtra">
-                    <div class="stars"><span class="label">Stars:</span>{{i.stars}}</div>
-                    <div class="hits"><span class="label">Hits:</span>{{i.hits}}</div>
-                    <div class="description"><span class="label">Description:</span>{{i.description}}</div>
+                <h4 class="name">{{library.name}}</h4>
+                <div class="extra" ng-show="library.showExtra">
+                    <div class="stars"><span class="label">Stars:</span>{{library.stars}}</div>
+                    <div class="hits"><span class="label">Hits:</span>{{library.hits}}</div>
+                    <div class="description"><span class="label">Description:</span>{{library.description}}</div>
                     <div class="cdn">
                         <ul>
-                            <li class="versionContainer" ng-repeat="(version, files) in i.cdn" ng-click="$event.stopPropagation();showVersion=!showVersion">
+                            <li class="versionContainer" ng-repeat="(version, files) in library.cdn" ng-click="$event.stopPropagation();showVersion=!showVersion">
                                 <div class="displayHelp">Details</div>
                                 <div class="version">{{version}}</div>
                                 <ul ng-show="showVersion">
