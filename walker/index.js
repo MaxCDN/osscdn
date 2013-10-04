@@ -30,7 +30,7 @@ function main() {
 
     TESTING = program.testing;
 
-    walk(program.input, write.bind(null, program.output));
+    walk(program.input, catchError(write.bind(null, program.output)));
 }
 
 function walk(root, cb) {
@@ -102,20 +102,20 @@ function walk(root, cb) {
     });
 }
 
-function write(output, err, d) {
-    if(err) return console.error(err);
+function write(output, d) {
+    var names = d.map(prop('name'));
 
     fs.exists(output, function(exists) {
         if(exists) writeData();
-        else fs.mkdir(output, writeData)
+        else fs.mkdir(output, catchError(writeData));
     });
 
-    function writeData(err) {
-        if(err) return console.error(err);
+    function writeData() {
+        fs.writeFile(path.join(output, 'index.json'), JSON.stringify(names), catchError);
 
-        fs.writeFile(path.join(output, 'index.json'), JSON.stringify(d), function(err) {
-            if(err) return console.error(err);
-        })
+        d.forEach(function(v) {
+            fs.writeFile(path.join(output, v.name + '.json'), JSON.stringify(v), catchError);
+        });
     }
 }
 
@@ -149,6 +149,20 @@ function getWatchers(o, cb) {
 
         cb(null, d.watchers_count);
     });
+}
+
+function catchError(fn) {
+    return function(err, d) {
+        if(err) return console.error(err);
+
+        fn(d);
+    };
+}
+
+function prop(name) {
+    return function(v) {
+        return v[name];
+    };
 }
 
 function id(a) {
