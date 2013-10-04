@@ -43,11 +43,21 @@
         <ul>
             <li class="library" ng-repeat="i in items | filter:search | orderBy:predicate:reverse" ng-click="show=!show" ng-class="{visible: show}">
                 <div class="displayHelp">Details</div>
-                <h4 class="name">{{i.name}}</h4>
+                <h4 class="name"><a href="{{i.homepage}}">{{i.name}}</a></h4>
                 <div class="extra" ng-show="show">
                     <div class="stars"><span class="label">Stars:</span>{{i.stars}}</div>
                     <div class="hits"><span class="label">Hits:</span>{{i.hits}}</div>
                     <div class="description"><span class="label">Description:</span>{{i.description}}</div>
+                    <div class="cdn">
+                        <ul>
+                            <li class="versionContainer" ng-repeat="(version, files) in i.cdn">
+                                <div class="version">{{version}}</div>
+                                <ul>
+                                    <li class="file" ng-repeat="file in files"><a href=".../{{file}}">{{file}}</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </li>
         </ul>
