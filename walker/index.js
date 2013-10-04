@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 var path = require('path');
+var extend = require('util')._extend;
 
 var glob = require('glob');
 var async = require('async');
@@ -36,20 +37,31 @@ function walk(root) {
                 return cb();
             }
 
-            getWatchers(parseGh(d.repositories[0].url), function(err, stars) {
-                if(err) return cb(err);
+            async.waterfall([
+                function(cb) {
+                    var ret = {
+                        name: d.name,
+                        version: d.version,
+                        description: d.description,
+                        homepage: d.homepage,
+                        keywords: d.keywords
+                    };
 
-                cb(null, {
-                    name: d.name,
-                    version: d.version,
-                    description: d.description,
-                    homepage: d.homepage,
-                    keywords: d.keywords,
-                    stars: stars,
-                    statistics: {}, // TODO: fetch from max
-                    cdn: [] // TODO: this should contain links to cdn
-                });
-            });
+                    cb(null, ret);
+                },
+                function(ret, cb) {
+                    getWatchers(parseGh(d.repositories[0].url), function(err, stars) {
+                        ret.stars = stars;
+
+                        cb(null, ret);
+                    });
+                },
+                function(ret, cb) {
+                    // TODO: parse statistics and cdn
+
+                    cb(null, ret);
+                }
+            ], cb);
         }, function(err, d) {
             if(err) return console.error(err);
 
