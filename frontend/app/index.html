@@ -25,9 +25,14 @@
       <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
 
-    <div class="container" ng-controller="InstantSearchController">
+    <header>
+    <h1>osscdn</h1>
+    <div class="motto">The CDN with attitude</div>
+    </header>
+
+    <article class="container" ng-controller="InstantSearchController">
         <div class="search">
-            <input type="text" ng-model="search.name" placeholder="Enter your search terms" />
+            <input type="text" ng-model="search.name" placeholder="Search" />
         </div>
 
         <div class="sorting">
@@ -35,17 +40,35 @@
             <a class="sort" ng-click="predicate='hits'; reverse=!reverse">Sort by hits</a>
         </div>
 
+        <paginator></paginator>
         <ul>
-            <li class="slide library" ng-repeat="i in items | filter:search | orderBy:predicate:reverse" ng-click="show=!show">
-                <div class="name">{{i.name}}</div>
-                <div class="extra" ng-show="show">
-                    <div class="stars">Stars: {{i.stars}}</div>
-                    <div class="hits">Hits: {{i.hits}}</div>
-                    <div class="description">Description: {{i.description}}</div>
+            <li class="library" ng-repeat="i in items | filter:search | orderBy:predicate:reverse | paginate" ng-click="showExtra=!showExtra" ng-class="{visible: show}">
+                <div class="displayHelp">Details</div>
+                <h4 class="name"><a href="{{i.homepage}}">{{i.name}}</a></h4>
+                <div class="extra" ng-show="showExtra">
+                    <div class="stars"><span class="label">Stars:</span>{{i.stars}}</div>
+                    <div class="hits"><span class="label">Hits:</span>{{i.hits}}</div>
+                    <div class="description"><span class="label">Description:</span>{{i.description}}</div>
+                    <div class="cdn">
+                        <ul>
+                            <li class="versionContainer" ng-repeat="(version, files) in i.cdn" ng-click="$event.stopPropagation();showVersion=!showVersion">
+                                <div class="displayHelp">Details</div>
+                                <div class="version">{{version}}</div>
+                                <ul ng-show="showVersion">
+                                    <li class="file" ng-repeat="file in files track by $index"><a href=".../{{file}}">{{file}}</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </li>
         </ul>
-    </div>
+        <paginator></paginator>
+    </article>
+
+    <footer>
+        <div>Brought to you by ...</div>
+    </footer>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
