@@ -4,6 +4,7 @@ var path = require('path');
 
 var glob = require('glob');
 var async = require('async');
+var trim = require('trimmer');
 var github = new (require('github'))({
     version: '3.0.0',
     protocol: 'https',
@@ -122,12 +123,33 @@ function write(output, d) {
 function parseGh(url) {
     if(!url) return {};
 
-    var parts = url.split('https://github.com/').join('').split('/');
+    var partitions = partition('github.com', url);
+
+    // not a github repo
+    if(partitions.length < 2) return {};
+
+    var parts = partitions[1].split('/').filter(id);
+    var user = parts[0];
+    var repo = trim.right(parts[1], '.git');
+
+    if(!user || !repo) {
+        console.warn('Missing gh data', url, parts, user, repo);
+
+        return {};
+    }
 
     return {
-        user: parts[0],
-        repo: parts[1].split('.')[0]
+        user: user,
+        repo: repo
     };
+}
+
+function partition(chr, str) {
+    var parts = str.split(chr);
+    var lPart = parts.shift();
+    var rPart = parts.join(chr);
+
+    return rPart? [lPart, rPart]: [lPart];
 }
 
 function getWatchers(o, cb) {

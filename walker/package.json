@@ -12,6 +12,7 @@
     "async": "~0.2.9",
     "glob": "~3.2.6",
     "github": "~0.1.12",
-    "commander": "~2.0.0"
+    "commander": "~2.0.0",
+    "trimmer": "0.0.3"
   }
 }
