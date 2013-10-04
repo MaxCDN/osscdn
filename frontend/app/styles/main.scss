@@ -148,7 +148,7 @@ ul {
     display: none;
 }
 
-.library:hover .displayHelp {
+.library:hover > .displayHelp, .versionContainer:hover .displayHelp {
     display: block;
 }
 
