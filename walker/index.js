@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 var path = require('path');
-var extend = require('util')._extend;
 
 var glob = require('glob');
 var async = require('async');
