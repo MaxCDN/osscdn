@@ -57,7 +57,30 @@ function walk(root) {
                     });
                 },
                 function(ret, cb) {
-                    // TODO: parse statistics and cdn
+                    var dirname = path.dirname(file);
+
+                    glob(dirname + '/*/**/*', function(err, files) {
+                        if(err) return cb(err);
+                        var cdn = {};
+
+                        files.forEach(function(f) {
+                            var base = f.split(dirname + '/')[1];
+                            var parts = base.split('/');
+                            var version = parts[0];
+                            var f = parts[1];
+
+                            if(!(version in cdn)) cdn[version] = [];
+
+                            cdn[version].push(f);
+                        });
+
+                        ret.cdn = cdn;
+
+                        cb(null, ret);
+                    });
+                },
+                function(ret, cb) {
+                    // TODO: get statistics
 
                     cb(null, ret);
                 }
@@ -65,7 +88,7 @@ function walk(root) {
         }, function(err, d) {
             if(err) return console.error(err);
 
-            console.log(d.filter(id));
+            console.log(JSON.stringify(d.filter(id)));
         });
     });
 }
