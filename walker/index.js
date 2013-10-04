@@ -23,13 +23,22 @@ function walk(root) {
         if(err) return console.error(err);
 
         async.map(files, function(file, cb) {
-            // TODO: fetch stars and stats here
-            cb(null, require('./' + file));
+            var d = require('./' + file);
+
+            cb(null, {
+                name: d.name,
+                version: d.version,
+                description: d.description,
+                homepage: d.homepage,
+                keywords: d.keywords,
+                stars: 0, // TODO: fetch from gh based on project gh url
+                statistics: {}, // TODO: fetch from max
+                cdn: [] // TODO: this should contain links to cdn
+            });
         }, function(err, d) {
             if(err) return console.error(err);
 
-            // TODO: merge data now etc.
-            console.log('data', d);
+            console.log(d);
         });
     });
 }
