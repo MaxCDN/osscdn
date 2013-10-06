@@ -4,6 +4,7 @@ var path = require('path');
 
 var glob = require('glob');
 var async = require('async');
+var walker = require('filewalker');
 var trim = require('trimmer');
 var github = new (require('github'))({
     version: '3.0.0',
@@ -68,26 +69,18 @@ function walk(root, cb) {
                 },
                 function(ret, cb) {
                     var dirname = path.dirname(file);
+                    var cdn = {};
+                    ret.cdn = cdn;
 
-                    glob(dirname + '/*/**/*', function(err, files) {
-                        if(err) return cb(err);
-                        var cdn = {};
+                    walker(dirname).on('file', function(p) {
+                        var parts = p.split('/');
+                        var version = parts[0];
+                        var f = parts.slice(1).join('/');
 
-                        files.forEach(function(f) {
-                            var base = f.split(dirname + '/')[1];
-                            var parts = base.split('/');
-                            var version = parts[0];
-                            var f = parts[1];
+                        if(!(version in cdn)) cdn[version] = [];
 
-                            if(!(version in cdn)) cdn[version] = [];
-
-                            cdn[version].push(f);
-                        });
-
-                        ret.cdn = cdn;
-
-                        cb(null, ret);
-                    });
+                        cdn[version].push(f);
+                    }).on('error', cb).on('done', cb.bind(null, null, ret)).walk();
                 },
                 function(ret, cb) {
                     // TODO: get statistics
