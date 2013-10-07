@@ -6,14 +6,11 @@ var glob = require('glob');
 var async = require('async');
 var walker = require('filewalker');
 var trim = require('trimmer');
-var github = new (require('github'))({
-    version: '3.0.0',
-    protocol: 'https',
-    timeout: 5000
-});
 
 var version = require('./package.json').version;
 var program = require('commander');
+
+var gh = require('./gh');
 
 
 var TESTING;
@@ -153,27 +150,6 @@ function partition(chr, str) {
     return rPart? [lPart, rPart]: [lPart];
 }
 
-function getWatchers(o, cb) {
-    if(!o.user) {
-        console.warn('Missing user', o);
-
-        return cb();
-    }
-    if(!o.repo) {
-        console.warn('Missing repo', o);
-
-        return cb();
-    }
-
-    if(TESTING) return cb(null, Math.round(Math.random() * 10000));
-
-    github.repos.get(o, function(err, d) {
-        if(err) return cb(err);
-
-        cb(null, d.watchers_count);
-    });
-}
-
 function catchError(fn) {
     return function(err, d) {
         if(err) return console.error(err);
@@ -184,4 +160,10 @@ function catchError(fn) {
 
 function id(a) {
     return a;
+}
+
+function getWatchers(o, cb) {
+    if(TESTING) return cb(null, Math.round(Math.random() * 10000));
+
+    return gh.getWatchers(o, cb);
 }
