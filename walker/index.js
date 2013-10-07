@@ -5,11 +5,11 @@ var path = require('path');
 var glob = require('glob');
 var async = require('async');
 var walker = require('filewalker');
-var trim = require('trimmer');
 
 var version = require('./package.json').version;
 var program = require('commander');
 
+var utils = require('./utils');
 var gh;
 
 
@@ -41,7 +41,7 @@ function main() {
         };
     }
 
-    walk(program.input, catchError(write.bind(null, program.output)));
+    walk(program.input, utils.catchError(write.bind(null, program.output)));
 }
 
 function walk(root, cb) {
@@ -70,8 +70,11 @@ function walk(root, cb) {
                     cb(null, ret);
                 },
                 function(ret, cb) {
-                    gh.getWatchers(parseGh(d.repositories[0].url), function(err, stars) {
-                        if(err) return cb(err);
+                    var repoUrl = d.repositories[0].url;
+                    var ghQuery = utils.parseGh(repoUrl);
+
+                    gh.getWatchers(ghQuery, function(err, stars) {
+                        if(err) return cb({err: err, ghQuery: ghQuery, repoUrl: repoUrl});
 
                         ret.stars = stars;
 
@@ -102,7 +105,7 @@ function walk(root, cb) {
         }, function(err, d) {
             if(err) return cb(err);
 
-            cb(null, d.filter(id));
+            cb(null, d.filter(utils.id));
         });
     });
 }
@@ -118,58 +121,14 @@ function write(output, d) {
 
     fs.exists(output, function(exists) {
         if(exists) writeData();
-        else fs.mkdir(output, catchError(writeData));
+        else fs.mkdir(output, utils.catchError(writeData));
     });
 
     function writeData() {
-        fs.writeFile(path.join(output, 'index.json'), JSON.stringify(indexData), catchError);
+        fs.writeFile(path.join(output, 'index.json'), JSON.stringify(indexData), utils.catchError);
 
         d.forEach(function(v) {
-            fs.writeFile(path.join(output, v.name + '.json'), JSON.stringify(v), catchError);
+            fs.writeFile(path.join(output, v.name + '.json'), JSON.stringify(v), utils.catchError);
         });
     }
-}
-
-function parseGh(url) {
-    if(!url) return {};
-
-    var partitions = partition('github.com', url);
-
-    // not a github repo
-    if(partitions.length < 2) return {};
-
-    var parts = partitions[1].split('/').filter(id);
-    var user = parts[0];
-    var repo = trim.right(parts[1], '.git');
-
-    if(!user || !repo) {
-        console.warn('Missing gh data', url, parts, user, repo);
-
-        return {};
-    }
-
-    return {
-        user: user,
-        repo: repo
-    };
-}
-
-function partition(chr, str) {
-    var parts = str.split(chr);
-    var lPart = parts.shift();
-    var rPart = parts.join(chr);
-
-    return rPart? [lPart, rPart]: [lPart];
-}
-
-function catchError(fn) {
-    return function(err, d) {
-        if(err) return console.error(err);
-
-        fn(d);
-    };
-}
-
-function id(a) {
-    return a;
 }

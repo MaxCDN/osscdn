@@ -5,7 +5,7 @@
   "description": "Walks through package.json files and composites them",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node ./tests.js"
   },
   "author": "Juho Vepsalainen",
   "dependencies": {
@@ -13,7 +13,9 @@
     "glob": "~3.2.6",
     "github": "~0.1.12",
     "commander": "~2.0.0",
-    "trimmer": "0.0.3",
     "filewalker": "~0.1.2"
+  },
+  "devDependencies": {
+    "suite.js": "~0.6.0"
   }
 }
