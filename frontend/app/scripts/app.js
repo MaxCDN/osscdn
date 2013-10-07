@@ -4,14 +4,8 @@ var app = angular.module('osscdnApp', ['ngAnimate']);
 
 app.controller('InstantSearchController', ['$scope', '$http', function($scope, $http) {
     $http.get('data/index.json').then(function(res) {
-        $scope.libraries = toNames(res.data);
+        $scope.libraries = res.data;
     });
-
-    function toNames(d) {
-        return d.map(function(v) {
-            return {name: v};
-        });
-    }
 
     $scope.getLibrary = function($index, library) {
         library.showExtra =! library.showExtra;
