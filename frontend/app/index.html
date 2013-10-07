@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <!-- build:css(.tmp) styles/main.css -->
+        <!-- build:css(.tmps) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
 </head>
@@ -45,7 +45,7 @@
             <li class="library" ng-repeat="library in libraries | filter:search | orderBy:predicate:reverse | paginate" ng-click="getLibrary($index, library)" ng-class="{visible: show}">
                 <div class="displayHelp">Details</div>
                 <h4 class="name">{{library.name}}</h4>
-                <div class="extra" ng-show="library.showExtra">
+                <div class="extra" ng-if="library.showExtra">
                     <div class="stars"><span class="label">Stars:</span>{{library.stars}}</div>
                     <div class="hits"><span class="label">Hits:</span>{{library.hits}}</div>
                     <div class="description"><span class="label">Description:</span>{{library.description}}</div>
@@ -54,7 +54,7 @@
                             <li class="versionContainer" ng-repeat="(version, files) in library.cdn" ng-click="$event.stopPropagation();showVersion=!showVersion">
                                 <div class="displayHelp">Details</div>
                                 <div class="version">{{version}}</div>
-                                <ul ng-show="showVersion">
+                                <ul class="extra" ng-if="showVersion">
                                     <li class="file" ng-repeat="file in files track by $index"><a href=".../{{file}}">{{file}}</a></li>
                                 </ul>
                             </li>
