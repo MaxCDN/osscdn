@@ -140,8 +140,8 @@ function write(output, d) {
     function writeData() {
         fs.writeFile(path.join(output, 'index.json'), JSON.stringify(indexData), utils.catchError);
 
-        d.forEach(function(v) {
-            fs.writeFile(path.join(output, v.name + '.json'), JSON.stringify(v), utils.catchError);
-        });
+        async.eachSeries(d, function(v, cb) {
+            fs.writeFile(path.join(output, v.name + '.json'), JSON.stringify(v), cb);
+        }, utils.catchError);
     }
 }
