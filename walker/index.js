@@ -62,6 +62,8 @@ function walk(root, cb) {
                 },
                 function(ret, cb) {
                     getWatchers(parseGh(d.repositories[0].url), function(err, stars) {
+                        if(err) return cb(err);
+
                         ret.stars = stars;
 
                         cb(null, ret);
@@ -83,7 +85,7 @@ function walk(root, cb) {
                     }).on('error', cb).on('done', cb.bind(null, null, ret)).walk();
                 },
                 function(ret, cb) {
-                    // TODO: get statistics
+                    ret.hits = 0; // TODO: fetch this through API
 
                     cb(null, ret);
                 }
@@ -97,7 +99,13 @@ function walk(root, cb) {
 }
 
 function write(output, d) {
-    var names = d.map(prop('name'));
+    var indexData = d.map(function(v) {
+        return {
+            name: v.name,
+            stars: v.stars,
+            hits: v.hits
+        };
+    });
 
     fs.exists(output, function(exists) {
         if(exists) writeData();
@@ -105,7 +113,7 @@ function write(output, d) {
     });
 
     function writeData() {
-        fs.writeFile(path.join(output, 'index.json'), JSON.stringify(names), catchError);
+        fs.writeFile(path.join(output, 'index.json'), JSON.stringify(indexData), catchError);
 
         d.forEach(function(v) {
             fs.writeFile(path.join(output, v.name + '.json'), JSON.stringify(v), catchError);
@@ -171,12 +179,6 @@ function catchError(fn) {
         if(err) return console.error(err);
 
         fn(d);
-    };
-}
-
-function prop(name) {
-    return function(v) {
-        return v[name];
     };
 }
 
