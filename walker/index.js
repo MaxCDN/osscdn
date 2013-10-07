@@ -87,6 +87,8 @@ function walk(root, cb) {
                     ret.cdn = cdn;
 
                     walker(dirname).on('file', function(p) {
+                        if(p == 'package.json') return;
+
                         var parts = p.split('/');
                         var version = parts[0];
                         var f = parts.slice(1).join('/');
