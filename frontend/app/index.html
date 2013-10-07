@@ -46,9 +46,9 @@
                 <div class="displayHelp">Details</div>
                 <h4 class="name">{{library.name}}</h4>
                 <div class="extra" ng-if="library.showExtra">
-                    <div class="stars"><span class="label">Stars:</span>{{library.stars}}</div>
-                    <div class="hits"><span class="label">Hits:</span>{{library.hits}}</div>
-                    <div class="description"><span class="label">Description:</span>{{library.description}}</div>
+                    <div class="stars"><span class="label label-default">Stars:</span>{{library.stars}}</div>
+                    <div class="hits"><span class="label label-default">Hits:</span>{{library.hits}}</div>
+                    <div class="description"><span class="label label-default">Description:</span>{{library.description}}</div>
                     <div class="cdn">
                         <ul>
                             <li class="versionContainer" ng-repeat="(version, files) in library.cdn" ng-click="$event.stopPropagation();showVersion=!showVersion">
