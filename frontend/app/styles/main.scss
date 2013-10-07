@@ -159,3 +159,10 @@ ul {
 .label {
     margin-right: 0.5em;
 }
+
+.pageSelector, .sort {
+    padding: 0;
+
+    cursor: pointer;
+    cursor: hand;
+}

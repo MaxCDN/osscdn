@@ -1,6 +1,6 @@
 <div class="pagination text-center" ng-show="paginator.pageCount() > 1">
     <ul>
-        <li ng-click="paginator.setPage(i)" ng-repeat="i in [] | forLoop:0:paginator.pageCount()" ng-class="paginator.page==i && 'active'">
+        <li ng-click="paginator.setPage(i)" ng-repeat="i in [] | forLoop:0:paginator.pageCount()" ng-class="paginator.page==i && 'active'" class="pageSelector">
             <a>{{i+1}}</a>
         </li>
     </ul>
