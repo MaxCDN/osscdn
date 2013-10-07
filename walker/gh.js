@@ -4,6 +4,18 @@ var github = new (require('github'))({
     timeout: 5000
 });
 
+function auth(token) {
+    github.authenticate({
+        type: 'oauth',
+        token: token
+    });
+
+    return {
+        getWatchers: getWatchers
+    };
+}
+module.exports = auth;
+
 
 function getWatchers(o, cb) {
     if(!o.user) {
@@ -23,4 +35,3 @@ function getWatchers(o, cb) {
         cb(null, d.watchers_count);
     });
 }
-exports.getWatchers = getWatchers;

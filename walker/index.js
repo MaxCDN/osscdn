@@ -10,10 +10,8 @@ var trim = require('trimmer');
 var version = require('./package.json').version;
 var program = require('commander');
 
-var gh = require('./gh');
+var gh;
 
-
-var TESTING;
 
 main();
 
@@ -21,13 +19,27 @@ function main() {
     program.version(version).
         option('-i --input <directory>', 'input directory').
         option('-o --output <directory>', 'output directory').
-        option('-t --testing', 'generate dummy data for GitHub etc.').
+        option('-c --config <file>', 'config file with credentials').
         parse(process.argv);
 
     if(!program.input) return console.error('Missing input!');
     if(!program.output) return console.error('Missing output!');
 
-    TESTING = program.testing;
+    var config = {github: ''};
+
+    try {
+        config = require('./' + program.config);
+
+        gh = require('./gh')(config.github);
+    } catch(e) {
+        console.warn('Configuration was not provided, generating dummy data for GH');
+
+        gh = {
+            getWatchers: function(o, cb) {
+                cb(null, Math.round(Math.random() * 10000));
+            }
+        };
+    }
 
     walk(program.input, catchError(write.bind(null, program.output)));
 }
@@ -58,7 +70,7 @@ function walk(root, cb) {
                     cb(null, ret);
                 },
                 function(ret, cb) {
-                    getWatchers(parseGh(d.repositories[0].url), function(err, stars) {
+                    gh.getWatchers(parseGh(d.repositories[0].url), function(err, stars) {
                         if(err) return cb(err);
 
                         ret.stars = stars;
@@ -160,10 +172,4 @@ function catchError(fn) {
 
 function id(a) {
     return a;
-}
-
-function getWatchers(o, cb) {
-    if(TESTING) return cb(null, Math.round(Math.random() * 10000));
-
-    return gh.getWatchers(o, cb);
 }
