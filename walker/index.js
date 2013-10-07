@@ -50,8 +50,12 @@ function walk(root, cb) {
 
         async.map(files, function(file, cb) {
             var d = require('./' + file);
+            var repoUrl = d.repositories && d.repositories[0] && d.repositories[0].url;
 
-            if(!d.repositories || !d.repositories[0]) {
+            if(!repoUrl && d.repository) repoUrl = d.repository.url;
+            if(!repoUrl && d.homepage) repoUrl = d.homepage;
+
+            if(!repoUrl) {
                 console.warn(d.name + ' is missing a repo!');
 
                 return cb();
@@ -70,7 +74,6 @@ function walk(root, cb) {
                     cb(null, ret);
                 },
                 function(ret, cb) {
-                    var repoUrl = d.repositories[0].url;
                     var ghQuery = utils.parseGh(repoUrl);
 
                     gh.getWatchers(ghQuery, function(err, stars) {

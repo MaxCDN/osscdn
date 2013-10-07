@@ -13,7 +13,8 @@
     "glob": "~3.2.6",
     "github": "~0.1.12",
     "commander": "~2.0.0",
-    "filewalker": "~0.1.2"
+    "filewalker": "~0.1.2",
+    "trimmer": "0.0.3"
   },
   "devDependencies": {
     "suite.js": "~0.6.0"
