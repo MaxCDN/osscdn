@@ -29,5 +29,9 @@ suite(utils.parseGh, [
     'https://github.com/nathansmith/960-Grid-System/blob/master/code/css/960.css', {
         user: 'nathansmith',
         repo: '960-Grid-System'
+    },
+    'http://fortawesome.github.com/Font-Awesome/', {
+        user: 'fortawesome',
+        repo: 'Font-Awesome'
     }
 ]);

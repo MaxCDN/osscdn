@@ -1,14 +1,14 @@
+var trim = require('trimmer');
+
+
 function parseGh(url) {
     if(!url) return {};
 
     var partitions = partition('github.com', url);
 
-    // not a github repo
     if(partitions.length < 2) return {};
-
-    if(url.indexOf('git@') == 0) {
-        return parseGit(url);
-    }
+    if(url.indexOf('git@') == 0) return parseGit(url);
+    if(partitions[0].split('//').filter(id).length > 1) return parseGhPages(partitions);
 
     var parts = partitions[1].split('/').filter(id);
     var user = parts[0];
@@ -36,7 +36,16 @@ function parseGit(url) {
     }
 }
 
+function parseGhPages(parts) {
+    return {
+        user: trim.right(parts[0].split('//')[1], '.'),
+        repo: trim(parts[1], '/')
+    };
+}
+
 function parseRepo(str) {
+    if(!str) return;
+
     var parts = str.split('.git');
 
     if(parts.length > 1) return parts.slice(0, -1).join('');
