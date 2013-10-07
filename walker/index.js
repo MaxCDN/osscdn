@@ -74,7 +74,11 @@ function walk(root, cb) {
                     var ghQuery = utils.parseGh(repoUrl);
 
                     gh.getWatchers(ghQuery, function(err, stars) {
-                        if(err) return cb({err: err, ghQuery: ghQuery, repoUrl: repoUrl});
+                        if(err) {
+                            console.warn({err: err, ghQuery: ghQuery, repoUrl: repoUrl});
+
+                            return cb(null, ret);
+                        }
 
                         ret.stars = stars;
 
