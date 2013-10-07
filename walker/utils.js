@@ -6,6 +6,7 @@ function parseGh(url) {
 
     var partitions = partition('github.com', url);
 
+    if(partitions.length < 2) partitions = partition('github.io', url);
     if(partitions.length < 2) return {};
     if(url.indexOf('git@') == 0) return parseGit(url);
     if(partitions[0].split('//').filter(id).length > 1) return parseGhPages(partitions);

@@ -37,5 +37,9 @@ suite(utils.parseGh, [
     'http://fortawesome.github.com/Font-Awesome/', {
         user: 'fortawesome',
         repo: 'Font-Awesome'
+    },
+    'http://sapegin.github.io/social-likes/', {
+        user: 'sapegin',
+        repo: 'social-likes'
     }
 ]);
