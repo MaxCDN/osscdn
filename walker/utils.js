@@ -63,6 +63,11 @@ function catchError(fn) {
 }
 exports.catchError = catchError;
 
+function endsWith(str, a) {
+    return str.indexOf(a) == str.length - a.length;
+}
+exports.endsWith = endsWith;
+
 function id(a) {
     return a;
 }
