@@ -6,6 +6,10 @@ var utils = require('./utils');
 
 suite(utils.parseGh, [
     'foo', {},
+    'git://github.com/coolony/kiwi', {
+        user: 'coolony',
+        repo: 'kiwi'
+    },
     'git@github.com:jquery/jquery.git', {
         user: 'jquery',
         repo: 'jquery'
