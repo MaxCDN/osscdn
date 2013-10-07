@@ -54,6 +54,9 @@ function parseRepo(str) {
 }
 
 function partition(chr, str) {
+    if(!chr) return;
+    if(!str) return;
+
     var parts = str.split(chr);
 
     var lPart = parts.shift();

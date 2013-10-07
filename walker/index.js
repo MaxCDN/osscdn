@@ -52,7 +52,11 @@ function walk(root, cb) {
             var d = require('./' + file);
             var repoUrl = d.repositories && d.repositories[0] && d.repositories[0].url;
 
-            if(!repoUrl && d.repository) repoUrl = d.repository.url;
+            if(!repoUrl && d.repository) {
+                if(Array.isArray(d.repository)) d.repository = d.repository[0];
+
+                repoUrl = d.repository.url? d.repository.url: d.repository;
+            }
             if(!repoUrl && d.homepage) repoUrl = d.homepage;
 
             if(!repoUrl) {
