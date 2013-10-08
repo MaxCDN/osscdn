@@ -1,0 +1,17 @@
+{
+    "name": "async",
+    "filename": "async.min.js",
+    "version": "0.2.7",
+    "description": "Higher-order functions and common patterns for asynchronous code",
+    "author": "Caolan McMahon",
+    "repository": {
+        "type": "git",
+        "url": "http://github.com/caolan/async.git"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "http://github.com/caolan/async/raw/master/LICENSE"
+        }
+    ]
+}
