@@ -101,6 +101,9 @@ function walk(root, cb) {
                         if(utils.endsWith(p, 'package.json')) return;
 
                         var parts = p.split('/');
+
+                        if(parts.length < 2) return;
+
                         var version = parts[0];
                         var f = parts.slice(1).join('/');
 
