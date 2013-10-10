@@ -29,6 +29,7 @@ function main() {
     });
 
     app.get('/', function(req, res) {
+        res.setHeader('Content-Type', 'text/html; charset=UTF-8');
         res.sendfile(__dirname + '/dist/index.html');
     });
 
