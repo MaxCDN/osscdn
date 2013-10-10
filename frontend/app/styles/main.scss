@@ -44,7 +44,7 @@ body{
 
 a, a:visited {
     outline:none;
-    color:#389dc1;
+    color:#00AE3B;
 }
 
 a:hover{
@@ -60,12 +60,7 @@ section, footer, header, aside, nav{
 --------------------------*/
 
 .search {
-    background-color:#ebe499;
-
-    background-image:-webkit-linear-gradient(top, #ebe499, #5392ad);
-    background-image:-moz-linear-gradient(top, #5c9bb7, #5392ad);
-    background-image:linear-gradient(top, #ebe499, #9c8145);
-
+    background-color:#00571E;
     box-shadow: 0 1px 1px #ccc;
     border-radius: 2px;
     width: 400px;
@@ -190,3 +185,4 @@ ul {
     opacity: 1;
     height: 100%;
 }
+.lbdiv{margin-bottom:5px;}

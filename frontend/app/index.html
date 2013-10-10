@@ -6,9 +6,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
+    <title>Open Source Software CDN by MaxCDN</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         <!-- build:css(.tmps) styles/main.css -->
@@ -26,8 +27,7 @@
     <![endif]-->
 
     <header>
-    <h1>osscdn</h1>
-    <div class="motto">The CDN with attitude</div>
+     <img src="./images/osscdn-logo.png"/>
     </header>
 
     <article class="container" ng-controller="InstantSearchController">
@@ -43,16 +43,16 @@
         <paginator></paginator>
         <ul>
             <li class="library" ng-repeat="library in libraries | filter:search | orderBy:predicate:reverse | paginate" ng-click="getLibrary($index, library)" ng-class="{visible: show}">
-                <div class="displayHelp">Details</div>
+                <div class="displayHelp"><i class="icon-caret-down icon-2x"></i></div>
                 <h4 class="name">{{library.name}}</h4>
                 <div class="extra" ng-if="library.showExtra">
-                    <div class="stars"><span class="label label-default">Stars:</span>{{library.stars}}</div>
-                    <div class="hits"><span class="label label-default">Hits:</span>{{library.hits}}</div>
-                    <div class="description"><span class="label label-default">Description:</span>{{library.description}}</div>
+                    <div class="lbdiv stars"><span class="label label-default">Stars:</span>{{library.stars}}</div>
+                    <div class="lbdiv hits"><span class="label label-default">Hits:</span>{{library.hits}}</div>
+                    <div class="lbdiv description"><span class="label label-default">Description:</span>{{library.description}}</div>
                     <div class="cdn">
                         <ul>
                             <li class="versionContainer" ng-repeat="(version, files) in library.cdn" ng-click="$event.stopPropagation();showVersion=!showVersion">
-                                <div class="displayHelp">Details</div>
+                                <div class="displayHelp"><i class="icon-caret-down icon-2x"></i></div>
                                 <div class="version">{{version}}</div>
                                 <ul class="extra" ng-if="showVersion">
                                     <li class="file" ng-repeat="file in files track by $index"><a href="//oss.maxcdn.com/libs/{{library.name}}/{{version}}/{{file}}">//oss.maxcdn.com/libs/{{library.name}}/{{version}}/{{file}}</a></li>
@@ -67,7 +67,7 @@
     </article>
 
     <footer>
-        <div>Brought to you by ...</div>
+        <div>Brought to you by your friends at <a href="http://www.maxcdn.com">MaxCDN</a></div>
     </footer>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
