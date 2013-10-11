@@ -19,7 +19,7 @@ The instructions below show how to get project dependencies installed and the pr
 
 1. Make sure you have a recent version of [Node.js](http://nodejs.org/) installed. It should include NPM, a package control by default. We'll use that to fetch our dependencies.
 2. In addition you are going to require [Bower](http://bower.io/). That will be used to deal with some of the frontend dependencies. Install it using npm like this `npm install bower -g`. After that you should have `bower` command available.
-3. The frontend relies on [Grunt](http://gruntjs.com/) for various tasks. Install the terminal client using `npm install grunt-cli`. After this you should have `grunt` command available.
+3. The frontend relies on [Grunt](http://gruntjs.com/) for various tasks. Install the terminal client using `npm install grunt-cli -g`. After this you should have `grunt` command available.
 4. Install Compass according to [the documentation](http://compass-style.org/install/). We use it for styling.
 5. Execute `npm install` at walker/
 6. Execute `npm install` at frontend/
