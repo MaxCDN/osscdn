@@ -1,6 +1,26 @@
-# osscdn
+# Open Source Software CDN
 
-Free CDN by MaxCDN.
+OSSCDN is a free CDN powered by [MaxCDN](http://www.maxcdn.com) that hosts all kinds of Open Source projects.
+
+This includes but not limited to js libraries, jQuery plugins, Linux Mirrors, executebale files and more
+
+## Submission Process
+
+### Rules
+
+* All filenames and directories should be lowercase. 
+* No spaces are allowed.
+* Follow existing structure and be consistent with other projects.
+
+### Pull Requests
+1. Fork the repository
+2. Add or Update the project you wish following the rules and file structure. 
+3. Send a Pull Request including a description
+
+
+
+### Other
+* If you wish to host files larger than 10MB please contact [Justin](https://github.com/jdorfman) or [Dmitriy](https://github.com/jimaek)
 
 ## Development
 
