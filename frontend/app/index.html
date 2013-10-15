@@ -30,41 +30,7 @@
      <img src="./images/osscdn-logo.png"/>
     </header>
 
-    <article class="container" ng-controller="InstantSearchController">
-        <div class="search">
-            <input type="text" ng-model="search.name" placeholder="Search" />
-        </div>
-
-        <div class="sorting">
-            <a class="sort" ng-click="predicate='stars'; reverse=!reverse">Sort by stars</a>
-            <a class="sort" ng-click="predicate='hits'; reverse=!reverse">Sort by hits</a>
-        </div>
-
-        <paginator></paginator>
-        <ul>
-            <li class="library" ng-repeat="library in libraries | filter:search | orderBy:predicate:reverse | paginate" ng-click="getLibrary($index, library)" ng-class="{visible: show}">
-                <div class="displayHelp"><i class="icon-caret-down icon-2x"></i></div>
-                <h4 class="name">{{library.name}}</h4>
-                <div class="extra" ng-if="library.showExtra">
-                    <div class="lbdiv stars"><span class="label label-default">Stars:</span>{{library.stars}}</div>
-                    <div class="lbdiv hits"><span class="label label-default">Hits:</span>{{library.hits}}</div>
-                    <div class="lbdiv description"><span class="label label-default">Description:</span>{{library.description}}</div>
-                    <div class="cdn">
-                        <ul>
-                            <li class="versionContainer" ng-repeat="(version, files) in library.cdn" ng-click="$event.stopPropagation();showVersion=!showVersion">
-                                <div class="displayHelp"><i class="icon-caret-down icon-2x"></i></div>
-                                <div class="version">{{version}}</div>
-                                <ul class="extra" ng-if="showVersion">
-                                    <li class="file" ng-repeat="file in files track by $index"><a href="//oss.maxcdn.com/libs/{{library.name}}/{{version}}/{{file}}">//oss.maxcdn.com/libs/{{library.name}}/{{version}}/{{file}}</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </li>
-        </ul>
-        <paginator></paginator>
-    </article>
+    <article class="container" ng-view=""></article>
 
     <footer>
         <div>Brought to you by your friends at <a href="http://www.maxcdn.com">MaxCDN</a></div>
@@ -84,12 +50,7 @@
     <script src="bower_components/jquery/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
-
-    <!-- build:js scripts/modules.js -->
-    <script src="bower_components/angular-resource/angular-resource.js"></script>
-    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-    <!-- endbuild -->
+    <script src="bower_components/angular-route/angular-route.js"></script>
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
