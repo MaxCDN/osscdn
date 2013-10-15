@@ -162,6 +162,10 @@ ul {
     cursor: hand;
 }
 
+.loader {
+    text-align: center;
+}
+
 /* animations - see http://www.nganimate.org/ */
 .extra.ng-enter, .extra.ng-leave {
      -webkit-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;

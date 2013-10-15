@@ -7,27 +7,31 @@
     <a class="sort" ng-click="predicate='hits'; reverse=!reverse">Sort by hits</a>
 </div>
 
-<paginator></paginator>
-<ul>
-    <li class="library" ng-repeat="library in libraries | filter:search | orderBy:predicate:reverse | paginate" ng-click="getLibrary($index, library)" ng-class="{visible: show}">
-        <div class="displayHelp"><i class="icon-caret-down icon-2x"></i></div>
-        <h4 class="name">{{library.name}}</h4>
-        <div class="extra" ng-show="library.showExtra">
-            <div class="lbdiv stars"><span class="label label-default">Stars:</span>{{library.stars}}</div>
-            <div class="lbdiv hits"><span class="label label-default">Hits:</span>{{library.hits}}</div>
-            <div class="lbdiv description"><span class="label label-default">Description:</span>{{library.description}}</div>
-            <div class="cdn">
-                <ul>
-                    <li class="versionContainer" ng-repeat="(version, files) in library.cdn" ng-click="$event.stopPropagation();showVersion=!showVersion">
-                        <div class="displayHelp"><i class="icon-caret-down icon-2x"></i></div>
-                        <div class="version">{{version}}</div>
-                        <ul class="extra" ng-show="showVersion">
-                            <li class="file" ng-repeat="file in files track by $index"><a href="//oss.maxcdn.com/libs/{{library.name}}/{{version}}/{{file}}">//oss.maxcdn.com/libs/{{library.name}}/{{version}}/{{file}}</a></li>
-                        </ul>
-                    </li>
-                </ul>
+<div class="loader" ng-hide="libraries">Loading</div>
+
+<div class="results" ng-show="libraries">
+    <paginator></paginator>
+    <ul>
+        <li class="library" ng-repeat="library in libraries | filter:search | orderBy:predicate:reverse | paginate" ng-click="getLibrary($index, library)" ng-class="{visible: show}">
+            <div class="displayHelp"><i class="icon-caret-down icon-2x"></i></div>
+            <h4 class="name">{{library.name}}</h4>
+            <div class="extra" ng-show="library.showExtra">
+                <div class="lbdiv stars"><span class="label label-default">Stars:</span>{{library.stars}}</div>
+                <div class="lbdiv hits"><span class="label label-default">Hits:</span>{{library.hits}}</div>
+                <div class="lbdiv description"><span class="label label-default">Description:</span>{{library.description}}</div>
+                <div class="cdn">
+                    <ul>
+                        <li class="versionContainer" ng-repeat="(version, files) in library.cdn" ng-click="$event.stopPropagation();showVersion=!showVersion">
+                            <div class="displayHelp"><i class="icon-caret-down icon-2x"></i></div>
+                            <div class="version">{{version}}</div>
+                            <ul class="extra" ng-show="showVersion">
+                                <li class="file" ng-repeat="file in files track by $index"><a href="//oss.maxcdn.com/libs/{{library.name}}/{{version}}/{{file}}">//oss.maxcdn.com/libs/{{library.name}}/{{version}}/{{file}}</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </li>
-</ul>
-<paginator></paginator>
+        </li>
+    </ul>
+    <paginator></paginator>
+</div>
