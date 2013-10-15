@@ -2,7 +2,7 @@
 
 OSSCDN is a free CDN powered by [MaxCDN](http://www.maxcdn.com) that hosts all kinds of Open Source projects.
 
-This includes but not limited to js libraries, jQuery plugins, Linux Mirrors, executebale files and more
+This includes but not limited to JS libraries, jQuery plugins, Linux Mirrors, executable files and more.
 
 ## Submission Process
 
