@@ -20,7 +20,7 @@
   "repositories": [
     {
       "type": "git",
-      "url": "git://github.com/angular-strap/angular-strap.git"
+      "url": "https://github.com/mgcrea/angular-strap"
     }
   ]
 }

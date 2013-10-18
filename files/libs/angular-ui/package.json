@@ -38,7 +38,7 @@
   ],
   "repositories": [{
     "type": "git",
-    "url": "https://github.com/angular-ui/angular-ui"
+    "url": "https://github.com/angular-ui/ui-utils"
   }],
   "bugs": "https://github.com/angular-ui/angular-ui/issues",
   "licenses": [

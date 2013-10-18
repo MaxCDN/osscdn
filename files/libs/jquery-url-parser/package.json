@@ -16,7 +16,7 @@
    "repositories": [
        {
            "type": "git",
-           "url": "https://github.com/allmarkedup/jQuery-URL-Parser"
+           "url": "https://github.com/allmarkedup/purl"
        }
    ]
 }

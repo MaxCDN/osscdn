@@ -19,7 +19,7 @@
    "repositories": [
        {
            "type": "git",
-           "url": "https://github.com/paulirish/infinitescroll.git" 
+           "url": "https://github.com/paulirish/infinite-scroll" 
        } 
    ]
 }

@@ -18,7 +18,7 @@
    "repositories": [
        {
            "type": "git",
-           "url": "https://github.com/addyosmani/backbone.paginator.git"
+           "url": "https://github.com/backbone-paginator/backbone.paginator"
        }
    ]
 
