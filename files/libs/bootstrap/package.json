@@ -1,8 +1,8 @@
 {
-    "name": "twitter-bootstrap",
+    "name": "bootstrap",
     "filename": "js/bootstrap.min.js",
     "version": "3.0.0",
-    "description": "Javascript plugins for the Twitter Bootstrap toolkit",
+    "description": "Sleek, intuitive, and powerful front-end framework for faster and easier web development.",
     "homepage": "http://getbootstrap.com/",
     "keywords": [
        "twitter",
