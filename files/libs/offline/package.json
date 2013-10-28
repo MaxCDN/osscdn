@@ -1,0 +1,17 @@
+{
+  "name": "offline",
+  "filename": "offline.min.js",
+  "version": "0.4.3",
+  "description": "Automatically display online/offline indication to your users",
+  "authors": [
+    "Adam Schwartz <aschwartz@hubspot.com>",
+    "Zack Bloom <zbloom@hubspot.com>"
+  ],
+  "license": "MIT",
+  "repositories": [
+       {
+           "type": "git",
+           "url": "https://github.com/HubSpot/offline.git"
+       }
+   ]
+}
