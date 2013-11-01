@@ -1,0 +1,21 @@
+{
+  "name": "riotjs",
+  "filename": "riot.min.js",
+  "description": "Riot is the fastest, smallest and most powerful client side framework for building large scale web applications. Despite the hilarious size all the building blocks are there: a template engine, router, event library and a strict MVP pattern to keep things organized. Your views are automatically updated when the underlying model changes.",
+  "version": "0.9.0",
+  "homepage": "https://moot.it/riotjs/",
+  "keywords": [
+    "framework",
+    "mvp"
+  ],
+  "contributors": [
+    {
+      "name": "moot"
+    }   
+  ],
+  "repositories": [{
+    "type": "git",
+    "url": "https://github.com/moot/riotjs.git"
+  }],
+  "bugs": "https://github.com/moot/riotjs/issues"
+}
