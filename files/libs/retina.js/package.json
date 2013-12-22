@@ -12,13 +12,13 @@
    "maintainers": [
        {
            "name": "Imulus",
-           "web": "http://imulus.com" 
-       } 
+           "web": "http://imulus.com"
+       }
    ],
    "repositories": [
        {
            "type": "git",
-           "url": "https://github.com/imulus/retinajs.git" 
-       } 
+           "url": "https://github.com/imulus/retinajs.git"
+       }
    ]
 }

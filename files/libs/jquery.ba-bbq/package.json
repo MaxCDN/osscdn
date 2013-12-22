@@ -21,9 +21,9 @@
        }
    ],
     "dependencies": {
-	"jquery": {
-	    "jquery": ">=1.2.6 <1.9",
-	    "jquery-migrate": ""
-	}
+    "jquery": {
+        "jquery": ">=1.2.6 <1.9",
+        "jquery-migrate": ""
+    }
     }
 }

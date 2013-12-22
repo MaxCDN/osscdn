@@ -12,14 +12,14 @@
        {
            "name": "Alex Sexton",
            "twitter": "SlexAxton",
-           "web": "http://alexsexton.com/" 
-       } 
+           "web": "http://alexsexton.com/"
+       }
    ],
    "repositories": [
        {
            "type": "git",
-           "url": "https://github.com/SlexAxton/yepnope.js" 
-       } 
+           "url": "https://github.com/SlexAxton/yepnope.js"
+       }
    ]
 
 }

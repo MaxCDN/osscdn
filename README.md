@@ -8,13 +8,13 @@ This includes but not limited to JS libraries, jQuery plugins, Linux Mirrors, ex
 
 ### Rules
 
-* All filenames and directories should be lowercase. 
+* All filenames and directories should be lowercase.
 * No spaces are allowed.
 * Follow existing structure and be consistent with other projects.
 
 ### Pull Requests
 1. Fork the repository
-2. Add or Update the project you wish following the rules and file structure. 
+2. Add or Update the project you wish following the rules and file structure.
 3. Send a Pull Request including a description
 
 

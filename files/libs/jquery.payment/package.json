@@ -6,7 +6,7 @@
     "homepage": "https://github.com/stripe/jquery.payment",
     "keywords": [
        "payment",
-	   "jquery"
+       "jquery"
    ],
    "maintainers": [
        {

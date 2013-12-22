@@ -15,14 +15,14 @@
        {
            "name": "Jason Johnston",
            "email": "jason@css3pie.com",
-           "web": "https://github.com/lojjic" 
-       } 
+           "web": "https://github.com/lojjic"
+       }
    ],
    "repositories": [
        {
            "type": "git",
-           "url": "https://github.com/lojjic/PIE" 
-       } 
+           "url": "https://github.com/lojjic/PIE"
+       }
    ]
 
 }

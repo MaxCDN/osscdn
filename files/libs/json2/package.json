@@ -11,14 +11,14 @@
    "maintainers": [
        {
            "name": "Douglas Crockford",
-           "web": "http://crockford.com/" 
-       } 
+           "web": "http://crockford.com/"
+       }
    ],
    "repositories": [
        {
            "type": "git",
-           "url": "https://github.com/douglascrockford/JSON-js" 
-       } 
+           "url": "https://github.com/douglascrockford/JSON-js"
+       }
    ]
 
 }

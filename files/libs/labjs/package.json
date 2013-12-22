@@ -17,8 +17,8 @@
    "repositories": [
        {
            "type": "git",
-           "url": "https://github.com/getify/LABjs" 
-       } 
+           "url": "https://github.com/getify/LABjs"
+       }
    ]
 
 }

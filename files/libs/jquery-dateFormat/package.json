@@ -14,12 +14,12 @@
        {
            "name": "Pablo Cantero",
            "web": "http://www.pablocantero.com/"
-       } 
+       }
    ],
    "repositories": [
-       { 
+       {
            "type": "git",
            "url": "https://github.com/phstc/jquery-dateFormat.git"
-       } 
+       }
    ]
 }

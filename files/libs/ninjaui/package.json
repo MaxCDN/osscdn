@@ -12,16 +12,16 @@
    "maintainers": [
        {
            "name": "Jamie R. Hoover and Faisal N. Jawdat",
-           "web": "http://ninjaui.com/" 
-       } 
+           "web": "http://ninjaui.com/"
+       }
    ],
        "bugs": "https://github.com/ninja/ui/issues/",
 
    "repositories": [
        {
            "type": "plain file",
-           "url": "https://github.com/ninja/ui/" 
-       } 
+           "url": "https://github.com/ninja/ui/"
+       }
    ]
 
 }

@@ -14,13 +14,13 @@
        {
            "name": "Brett Wejrowski",
            "web": "http://wojodesign.com"
-       } 
+       }
    ],
    "repositories": [
-       { 
+       {
            "type": "git",
-           "url": "https://github.com/wojodesign/simplecart-js" 
-       } 
+           "url": "https://github.com/wojodesign/simplecart-js"
+       }
    ]
 
 }

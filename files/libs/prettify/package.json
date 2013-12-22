@@ -10,8 +10,8 @@
    "repositories": [
        {
            "type": "svn",
-           "url": "http://google-code-prettify.googlecode.com/svn/trunk/" 
-       } 
+           "url": "http://google-code-prettify.googlecode.com/svn/trunk/"
+       }
    ]
 
 }

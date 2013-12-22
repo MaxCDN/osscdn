@@ -5,9 +5,9 @@
     "description": "A simple lightbox plugin based on the bootstrap modal plugin.",
     "homepage": "http://jbutz.github.com/bootstrap-lightbox/",
     "keywords": [
-	 	"bootstrap",
-		"lightbox",
-		"modal"
+        "bootstrap",
+        "lightbox",
+        "modal"
    ],
    "maintainers": [
        {

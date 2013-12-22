@@ -9,8 +9,8 @@
         "selectable",
         "highlight",
         "command",
-	"click",
-	"shift"
+    "click",
+    "shift"
     ],
     "maintainers": [
         {

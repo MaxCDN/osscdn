@@ -12,14 +12,14 @@
    "maintainers": [
        {
            "name": "David DeSandro",
-           "web": "http://desandro.com" 
-       } 
+           "web": "http://desandro.com"
+       }
    ],
    "repositories": [
        {
            "type": "git",
-           "url": "https://github.com/desandro/masonry" 
-       } 
+           "url": "https://github.com/desandro/masonry"
+       }
    ]
 
 }

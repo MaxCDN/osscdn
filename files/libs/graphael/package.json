@@ -13,14 +13,14 @@
    "maintainers": [
        {
            "name": "Dmitry Baranovskiy",
-           "web": "http://dmitry.baranovskiy.com/" 
-       } 
+           "web": "http://dmitry.baranovskiy.com/"
+       }
    ],
    "repositories": [
        {
            "type": "git",
-           "url": "https://github.com/DmitryBaranovskiy/g.raphael/" 
-       } 
+           "url": "https://github.com/DmitryBaranovskiy/g.raphael/"
+       }
    ]
 
 }

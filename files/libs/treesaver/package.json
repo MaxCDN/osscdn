@@ -11,14 +11,14 @@
    "maintainers": [
        {
            "name": "Andrea Campi",
-           "web": "https://github.com/andreacampi" 
-       } 
+           "web": "https://github.com/andreacampi"
+       }
    ],
    "repositories": [
        {
            "type": "git",
-           "url": "https://github.com/Treesaver/treesaver" 
-       } 
+           "url": "https://github.com/Treesaver/treesaver"
+       }
    ]
 
 }

@@ -14,13 +14,13 @@
            "name": "Joshaven Potter",
            "email": "yourtech@gmail.com",
            "web": "http://www.joshaven.com/string_score/"
-       } 
+       }
    ],
    "repositories": [
        {
            "type": "git",
-           "url": "https://github.com/joshaven/string_score.git" 
-       } 
+           "url": "https://github.com/joshaven/string_score.git"
+       }
    ]
 
 }

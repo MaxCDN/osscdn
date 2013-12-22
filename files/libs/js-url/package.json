@@ -11,14 +11,14 @@
    "maintainers": [
        {
            "name": "Websanova",
-           "web": "http://www.websanova.com" 
-       } 
+           "web": "http://www.websanova.com"
+       }
    ],
    "repositories": [
        {
            "type": "github",
-           "url": "https://github.com/websanova/js-url" 
-       } 
+           "url": "https://github.com/websanova/js-url"
+       }
    ],
    "license": "MIT, GPL"
 }

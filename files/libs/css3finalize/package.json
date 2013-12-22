@@ -11,14 +11,14 @@
    "maintainers": [
        {
            "name": "Han Lin Yap",
-           "web": "http://yap.nu/" 
-       } 
+           "web": "http://yap.nu/"
+       }
    ],
    "repositories": [
        {
            "type": "git",
-           "url": "https://github.com/codler/jQuery-Css3-Finalize" 
-       } 
+           "url": "https://github.com/codler/jQuery-Css3-Finalize"
+       }
    ]
 
 }

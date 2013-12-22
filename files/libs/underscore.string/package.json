@@ -18,13 +18,13 @@
        },
        {
            "name": "Edward Tsech",
-           "email": "edtsech@gmail.com" 
-       } 
+           "email": "edtsech@gmail.com"
+       }
    ],
    "repositories": [
        {
            "type": "git",
-           "url": "https://github.com/epeli/underscore.string" 
-       } 
+           "url": "https://github.com/epeli/underscore.string"
+       }
    ]
 }

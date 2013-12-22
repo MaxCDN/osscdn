@@ -7,23 +7,23 @@
     "keywords": [
        "publish",
        "subscribe",
-	   "pub/sub",
-	   "hub",
-	   "messaging",
-	   "broadcast",
-	   "decoupling"
+       "pub/sub",
+       "hub",
+       "messaging",
+       "broadcast",
+       "decoupling"
    ],
    "maintainers": [
        {
            "name": "OpenAjax Alliance",
-           "web": "http://www.openajax.org/" 
-       } 
+           "web": "http://www.openajax.org/"
+       }
    ],
    "repositories": [
        {
            "type": "svn",
            "url": "https://openajaxallianc.svn.sourceforge.net/svnroot/openajaxallianc",
-		   "path": "hub20/trunk/src/OpenAjax.js"
+           "path": "hub20/trunk/src/OpenAjax.js"
        }
    ]
 }

@@ -14,12 +14,12 @@
        {
            "name": "Dave Gamache",
            "url": "https://github.com/dhg"
-       } 
+       }
    ],
    "repositories": [
        {
            "type": "git",
            "url": "https://github.com/dhg/Skeleton.git"
-       } 
+       }
    ]
 }

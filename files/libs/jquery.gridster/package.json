@@ -10,7 +10,7 @@
         "grids",
         "ui",
         "templating",
-	"jquer"
+    "jquer"
     ],
     "repository": {
         "type": "git",
