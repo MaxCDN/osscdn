@@ -2,11 +2,6 @@
   <input type="text" ng-model="search.name" placeholder="Search">
 </div>
 
-<div class="sorting">
-  <a class="sort" ng-click="predicate='stars'; reverse=!reverse">Sort by stars</a>
-  <a class="sort" ng-click="predicate='hits'; reverse=!reverse">Sort by hits</a>
-</div>
-
 <div class="loader" ng-hide="libraries">Loading</div>
 
 <div class="results" ng-show="libraries">
