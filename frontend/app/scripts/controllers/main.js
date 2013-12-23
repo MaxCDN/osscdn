@@ -1,14 +1,31 @@
 'use strict';
 
-angular.module('osscdnApp').controller('MainCtrl', function ($scope, $http) {
+angular.module('osscdnApp').controller('MainCtrl', function ($scope, $http, $window) {
     $http.get('data/index.json').then(function(res) {
-        $scope.libraries = res.data;
+        // XXX: mock dropdown data
+        $scope.$alert = $window.alert.bind(null);
+        $scope.libraries = res.data.map(function(v) {
+            v.versions = [
+                {
+                    "text": "demo",
+                    "click": "$alert('demo')"
+                },
+                {
+                    "text": "demo2",
+                    "click": "$alert('demo')"
+                }
+            ];
+
+            return v;
+        });
     });
 
     $scope.getLibrary = function($index, library) {
         library.showExtra =! library.showExtra;
 
-        if(library.description || !library.showExtra) return;
+        if(library.description || !library.showExtra) {
+            return;
+        }
 
         $http.get('data/' + library.name + '.json').then(function(res) {
             var d = res.data;
@@ -18,5 +35,5 @@ angular.module('osscdnApp').controller('MainCtrl', function ($scope, $http) {
                 library[k] = d[k];
             }
         });
-    }
+    };
 });

@@ -21,6 +21,7 @@ a:hover{
 --------------------------*/
 
 .search {
+    width: 90%;
     box-shadow: 0 1px 1px #ccc;
     border-radius: 2px;
     padding: 14px;
@@ -81,7 +82,7 @@ ul li p {
 }
 
 .libraries {
-    width: 100%;
+    width: 90%;
 }
 
 .library {
@@ -99,8 +100,14 @@ ul li p {
     border: 0.1em solid #e3e3e3;
 }
 
-.library:hover {
-    background-color: #ddd;
+.library .name {
+    float: left;
+}
+
+.library .versionSelector {
+    float: left;
+
+    margin-left: 1em;
 }
 
 .library.visible {
@@ -112,11 +119,6 @@ ul li p {
     color: #aaa;
     display: none;
     cursor: pointer;
-}
-
-.library:hover > .displayHelp,
-.versionContainer:hover .displayHelp {
-    display: block;
 }
 
 .label {

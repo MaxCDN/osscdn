@@ -7,23 +7,9 @@
 <div class="results" ng-show="libraries">
   <ul class="libraries">
     <li class="library" ng-repeat="library in libraries | prioritysearch:search | limitTo:10" ng-click="getLibrary($index, library)" ng-class="{visible: show}">
-      <div class="displayHelp"><i class="icon-caret-down icon-2x"></i></div>
       <h4 class="name">{{library.name}}</h4>
-      <div class="extra" ng-show="library.showExtra">
-        <div class="lbdiv stars"><span class="label label-default">Stars:</span>{{library.stars}}</div>
-        <div class="lbdiv hits"><span class="label label-default">Hits:</span>{{library.hits}}</div>
-        <div class="lbdiv description"><span class="label label-default">Description:</span>{{library.description}}</div>
-        <div class="cdn">
-          <ul>
-            <li class="versionContainer" ng-repeat="(version, files) in library.cdn" ng-click="$event.stopPropagation();showVersion=!showVersion">
-              <div class="displayHelp"><i class="icon-caret-down icon-2x"></i></div>
-              <div class="version">{{version}}</div>
-              <ul class="extra" ng-show="showVersion">
-                <li class="file" ng-repeat="file in files track by $index"><a href="//oss.maxcdn.com/libs/{{library.name}}/{{version}}/{{file}}">//oss.maxcdn.com/libs/{{library.name}}/{{version}}/{{file}}</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
+      <div class="btn-group versionSelector">
+        <button type="button" class="btn btn-default" bs-dropdown="{{library.versions}}">Versions <b class="caret"></b></button>
       </div>
     </li>
   </ul>

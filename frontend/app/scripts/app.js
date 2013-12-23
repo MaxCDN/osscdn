@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('osscdnApp', ['ngAnimate', 'ngRoute']).
+angular.module('osscdnApp', ['ngAnimate', 'ngRoute', '$strap.directives']).
         config(function($locationProvider, $routeProvider) {
     $locationProvider.html5Mode(true);
 
