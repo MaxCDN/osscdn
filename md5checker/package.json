@@ -9,9 +9,9 @@
   },
   "author": "Juho Vepsalainen",
   "dependencies": {
-    "commander": "~2.0.0",
+    "commander": "~2.1.0",
     "filewalker": "~0.1.2",
-    "request": "~2.27.0",
-    "trimmer": "0.0.3"
+    "request": "~2.30.0",
+    "trimmer": "~0.0.3"
   }
 }
