@@ -87,6 +87,7 @@ function walk(root, cb) {
                             return cb(null, ret);
                         }
 
+                        ret.github = repoUrl;
                         ret.stars = stars;
 
                         cb(null, ret);
