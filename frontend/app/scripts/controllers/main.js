@@ -20,6 +20,14 @@ angular.module('osscdnApp').controller('MainCtrl', function ($scope, $http, $win
         });
     });
 
+    $scope.orderByName = function(library) {
+        if($scope.search && $scope.search.name) {
+            return library.name.length;
+        }
+
+        return library.name;
+    };
+
     $scope.getLibrary = function($index, library) {
         library.showExtra =! library.showExtra;
 
