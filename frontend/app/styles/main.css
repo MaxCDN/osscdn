@@ -94,6 +94,8 @@ ul li p {
     -ms-user-select: none;
     user-select: none;
 
+    margin-bottom: 1em;
+
     background-color: white;
     border-radius: 0.2em 0.1em 0.1em 0.1em;
     border: 0.1em solid #e3e3e3;
