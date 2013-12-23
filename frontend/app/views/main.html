@@ -11,7 +11,7 @@
 
 <div class="results" ng-show="libraries">
   <paginator></paginator>
-  <ul>
+  <ul class="libraries">
     <li class="library" ng-repeat="library in libraries | filter:search | orderBy:predicate:reverse | paginate" ng-click="getLibrary($index, library)" ng-class="{visible: show}">
       <div class="displayHelp"><i class="icon-caret-down icon-2x"></i></div>
       <h4 class="name">{{library.name}}</h4>
