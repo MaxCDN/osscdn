@@ -1,1 +1,6 @@
-node_modules/
+frontend/.tmp
+frontend/app/bower_components
+frontend/app/data
+frontend/dist
+node_modules
+walker/config.js
