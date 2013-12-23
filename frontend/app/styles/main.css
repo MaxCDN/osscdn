@@ -21,10 +21,8 @@ a:hover{
 --------------------------*/
 
 .search {
-    background-color: #00571E;
     box-shadow: 0 1px 1px #ccc;
     border-radius: 2px;
-    width: 400px;
     padding: 14px;
     margin: 45px auto 20px;
     position: relative;
