@@ -14,14 +14,14 @@
        {
            "name": "Ryan McGeary",
            "email": "ryan@mcgeary.org",
-           "web": "http://ryan.mcgeary.org/" 
-       } 
+           "web": "http://ryan.mcgeary.org/"
+       }
    ],
    "repositories": [
        {
            "type": "git",
-           "url": "https://github.com/rmm5t/jquery-timeago" 
-       } 
+           "url": "https://github.com/rmm5t/jquery-timeago"
+       }
    ]
 
 }

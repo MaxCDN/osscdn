@@ -6,34 +6,34 @@
     "homepage": "http://www.greensock.com/gsap-js/",
     "keywords": [
        "animation",
-	   "TweenLite",
-	   "TweenMax",
-	   "TimelineLite",
-	   "TimelineMax",
-	   "GSAP",
-	   "GreenSock",
-	   "easing",
-	   "EasePack",
-	   "jQuery",
-	   "jquery.gsap.js",
-	   "Bezier",
-	   "3D",
-	   "2D",
-	   "transform",
+       "TweenLite",
+       "TweenMax",
+       "TimelineLite",
+       "TimelineMax",
+       "GSAP",
+       "GreenSock",
+       "easing",
+       "EasePack",
+       "jQuery",
+       "jquery.gsap.js",
+       "Bezier",
+       "3D",
+       "2D",
+       "transform",
        "tweening"
    ],
    "maintainers": [
        {
            "name": "Jack Doyle",
-		   "email": "jack@greensock.com",
-           "web": "http://www.greensock.com" 
-       } 
+           "email": "jack@greensock.com",
+           "web": "http://www.greensock.com"
+       }
    ],
    "repositories": [
        {
            "type": "git",
-           "url": "https://github.com/greensock/GreenSock-JS" 
-       } 
+           "url": "https://github.com/greensock/GreenSock-JS"
+       }
    ]
 
 }

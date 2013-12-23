@@ -11,14 +11,14 @@
    "maintainers": [
        {
            "name": "Tom Moor",
-           "web": "http://tommoor.com" 
-       } 
+           "web": "http://tommoor.com"
+       }
    ],
    "repositories": [
        {
            "type": "github",
-           "url": "https://github.com/tommoor/tinycon" 
-       } 
+           "url": "https://github.com/tommoor/tinycon"
+       }
    ]
 
 }

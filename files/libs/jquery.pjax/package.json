@@ -7,7 +7,7 @@
     "keywords": [
         "ajax",
         "pjax",
-		"pushState",
+        "pushState",
         "jquery"
     ],
     "repositories": [

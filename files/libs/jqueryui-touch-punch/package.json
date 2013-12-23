@@ -12,13 +12,13 @@
    "maintainers": [
        {
            "name": "David Furfero",
-           "web": "http://furf.com" 
-       } 
+           "web": "http://furf.com"
+       }
    ],
    "repositories": [
        {
            "type": "git",
            "url": "https://github.com/furf/jquery-ui-touch-punch.git"
-       } 
+       }
    ]
 }

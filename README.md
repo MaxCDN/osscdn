@@ -8,13 +8,13 @@ This includes but not limited to JS libraries, jQuery plugins, Linux Mirrors, ex
 
 ### Rules
 
-* All filenames and directories should be lowercase. 
+* All filenames and directories should be lowercase.
 * No spaces are allowed.
 * Follow existing structure and be consistent with other projects.
 
 ### Pull Requests
 1. Fork the repository
-2. Add or Update the project you wish following the rules and file structure. 
+2. Add or Update the project you wish following the rules and file structure.
 3. Send a Pull Request including a description
 
 
@@ -40,13 +40,12 @@ The instructions below show how to get project dependencies installed and the pr
 1. Make sure you have a recent version of [Node.js](http://nodejs.org/) installed. It should include NPM, a package control by default. We'll use that to fetch our dependencies.
 2. In addition you are going to require [Bower](http://bower.io/). That will be used to deal with some of the frontend dependencies. Install it using npm like this `npm install bower -g`. After that you should have `bower` command available.
 3. The frontend relies on [Grunt](http://gruntjs.com/) for various tasks. Install the terminal client using `npm install grunt-cli -g`. After this you should have `grunt` command available.
-4. Install Compass according to [the documentation](http://compass-style.org/install/). We use it for styling.
-5. Execute `npm install` at walker/
-6. Execute `npm install` at frontend/
-7. Execute `bower install` at frontend/
-8. Execute `./generate_data.sh` at project root. This will output some data for frontend to use.
-9. Execute `cd frontend`
-10. Execute `grunt server`. This will run a development server and open the app in your browser. As you make changes to the project it will refresh the browser automatically.
+4. Execute `npm install` at walker/
+5. Execute `npm install` at frontend/
+6. Execute `bower install` at frontend/
+7. Execute `./generate_data.sh` at project root. This will output some data for frontend to use.
+8. Execute `cd frontend`
+9. Execute `grunt server`. This will run a development server and open the app in your browser. As you make changes to the project it will refresh the browser automatically.
 
 ### Production Server
 

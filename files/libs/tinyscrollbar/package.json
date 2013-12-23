@@ -11,14 +11,14 @@
    "maintainers": [
        {
            "name": "Maarten Baijs",
-           "web": "http://baijs.nl" 
-       } 
+           "web": "http://baijs.nl"
+       }
    ],
    "repositories": [
        {
            "type": "plain file",
-           "url": "http://baijs.nl/tinyscrollbar/js/jquery.tinyscrollbar.min.js" 
-       } 
+           "url": "http://baijs.nl/tinyscrollbar/js/jquery.tinyscrollbar.min.js"
+       }
    ]
 
 }

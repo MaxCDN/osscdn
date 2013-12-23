@@ -15,16 +15,16 @@
            "name": "Geoffrey Mcgill",
            "email":"geoff@geoff.ca",
            "twitter":"datejs"
-       } 
+       }
    ],
    "repositories": [
        {
            "type": "Google SVN",
-           "url": "http://code.google.com/p/datejs/source" 
+           "url": "http://code.google.com/p/datejs/source"
        },
        {
-		   "type": "git",
-		   "url": "https://github.com/datejs/Datejs"
+           "type": "git",
+           "url": "https://github.com/datejs/Datejs"
        }
    ]
 

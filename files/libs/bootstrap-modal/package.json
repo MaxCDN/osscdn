@@ -5,8 +5,8 @@
     "description": "Extends the default Bootstrap Modal class.",
     "homepage": "https://github.com/jschr/bootstrap-modal",
     "keywords": [
-	"bootstrap",
-	"modal"
+    "bootstrap",
+    "modal"
    ],
    "maintainers": [
        {

@@ -13,14 +13,14 @@
        {
            "name": "Mike Alsup",
            "email": "malsup@gmail.com",
-           "web": "http://jquery.malsup.com/" 
-       } 
+           "web": "http://jquery.malsup.com/"
+       }
    ],
    "repositories": [
        {
            "type": "git",
-           "url": "https://github.com/malsup/cycle" 
-       } 
+           "url": "https://github.com/malsup/cycle"
+       }
    ]
 
 }

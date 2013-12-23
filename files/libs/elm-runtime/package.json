@@ -11,9 +11,9 @@
        "functional"
    ],
    "repositories": [
-       { 
+       {
            "type": "git",
            "url": "https://github.com/evancz/Elm.git"
-       } 
+       }
    ]
 }

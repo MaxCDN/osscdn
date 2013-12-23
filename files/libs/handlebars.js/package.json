@@ -11,14 +11,14 @@
    "maintainers": [
        {
            "name": "Yehuda Katz",
-           "web": "http://www.yehudakatz.com" 
-       } 
+           "web": "http://www.yehudakatz.com"
+       }
    ],
    "repositories": [
        {
            "type": "git",
-           "url": "https://github.com/wycats/handlebars.js" 
-       } 
+           "url": "https://github.com/wycats/handlebars.js"
+       }
    ]
 
 }

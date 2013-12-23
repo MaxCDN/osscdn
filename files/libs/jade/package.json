@@ -13,12 +13,12 @@
            "name": "TJ Holowaychuk",
            "email": "tj@vision-media.ca",
            "web": "http://tjholowaychuk.com/"
-       } 
+       }
    ],
    "repositories": [
        {
            "type": "git",
            "url": "git://github.com/visionmedia/jade"
-       } 
+       }
    ]
 }

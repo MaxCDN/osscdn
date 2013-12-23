@@ -10,7 +10,7 @@
         "mvvm",
         "ui",
         "templating",
-	"sorting"
+    "sorting"
     ],
     "repository": {
         "type": "git",

@@ -8,23 +8,23 @@
        "loader",
        "asynchronous",
        "popular",
-	   "ender",
-	   "script",
-	   "dependency",
-	   "ajax",
-	   "jsonp"
+       "ender",
+       "script",
+       "dependency",
+       "ajax",
+       "jsonp"
    ],
    "maintainers": [
        {
            "name": "Dustin Diaz",
-           "web": "http://www.dustindiaz.com/" 
-       } 
+           "web": "http://www.dustindiaz.com/"
+       }
    ],
    "repositories": [
        {
            "type": "git",
-           "url": "https://github.com/ded/script.js.git" 
-       } 
+           "url": "https://github.com/ded/script.js.git"
+       }
    ]
 
 }

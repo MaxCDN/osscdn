@@ -12,13 +12,13 @@
        {
            "name": "Keith Clark",
            "email": "create@keithclark.co.uk",
-           "web": "http://www.keithclark.co.uk/" 
-       } 
+           "web": "http://www.keithclark.co.uk/"
+       }
    ],
    "repositories": [
        {
            "type": "git",
-           "url": "https://github.com/keithclark/selectivizr" 
-       } 
+           "url": "https://github.com/keithclark/selectivizr"
+       }
    ]
 }

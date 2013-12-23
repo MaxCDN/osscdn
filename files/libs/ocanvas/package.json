@@ -12,14 +12,14 @@
        {
            "name": "Johannes Koggdal",
            "twitter": "JohannesKoggdal",
-           "web": "http://koggdal.com/" 
-       } 
+           "web": "http://koggdal.com/"
+       }
    ],
    "repositories": [
        {
            "type": "git",
            "url": "https://github.com/koggdal/ocanvas"
-       } 
+       }
    ]
 
 }

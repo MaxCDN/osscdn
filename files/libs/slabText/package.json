@@ -15,13 +15,13 @@
        {
            "name": "Brian McAllister",
            "email": "frequency.decoder@gmail.com",
-           "web": "http://www.frequency-decoder.com/" 
-       } 
+           "web": "http://www.frequency-decoder.com/"
+       }
    ],
    "repositories": [
        {
            "type": "git",
-           "url": "https://github.com/freqdec/slabText" 
-       } 
+           "url": "https://github.com/freqdec/slabText"
+       }
    ]
 }

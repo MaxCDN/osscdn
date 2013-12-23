@@ -13,18 +13,18 @@
     "maintainers": [
         {
             "name": "Scott Elwood",
-            "web": "http://www.scottelwood.com" 
+            "web": "http://www.scottelwood.com"
         },
         {
             "name": "We the Media, Inc.",
-            "web": "http://www.wtmworldwide.com.com" 
+            "web": "http://www.wtmworldwide.com.com"
         }
     ],
     "repositories": [
         {
             "type": "git",
             "url": "git@github.com:McPants/jquery.shapeshift.git"
-        } 
+        }
     ],
     "dependencies": {
         "jquery": "~1.9.1",

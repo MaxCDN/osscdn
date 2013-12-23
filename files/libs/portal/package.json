@@ -16,12 +16,12 @@
     "maintainers": [
         {
             "name": "Donghwan Kim"
-        } 
+        }
     ],
     "repositories": [
         {
             "type": "git",
-            "url": "https://github.com/flowersinthesand/portal.git" 
-        } 
+            "url": "https://github.com/flowersinthesand/portal.git"
+        }
     ]
 }

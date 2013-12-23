@@ -12,13 +12,13 @@
        {
            "name": "Takayuki Miwa",
            "web": "http://github.com/tkyk/"
-       } 
+       }
    ],
    "repositories": [
-       { 
+       {
            "type": "git",
-           "url": "https://github.com/tkyk/jquery-history-plugin.git" 
-       } 
+           "url": "https://github.com/tkyk/jquery-history-plugin.git"
+       }
    ]
 
 }

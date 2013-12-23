@@ -20,7 +20,7 @@
    "repositories": [
        {
            "type": "git",
-           "url": "https://github.com/aino/galleria" 
-       } 
+           "url": "https://github.com/aino/galleria"
+       }
    ]
 }

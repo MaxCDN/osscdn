@@ -11,14 +11,14 @@
    "maintainers": [
        {
            "name": "Caleb Troughton",
-           "web": "http://imakewebthings.com/" 
-       } 
+           "web": "http://imakewebthings.com/"
+       }
    ],
    "repositories": [
        {
            "type": "git",
-           "url": "https://github.com/imakewebthings/jquery-waypoints" 
-       } 
+           "url": "https://github.com/imakewebthings/jquery-waypoints"
+       }
    ]
 
 }

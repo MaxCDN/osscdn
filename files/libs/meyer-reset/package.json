@@ -5,12 +5,12 @@
     "description": "Eric Meyer CSS reset",
     "homepage": "http://meyerweb.com/eric/tools/css/reset/",
     "keywords": [
-       "css", "reset" 
+       "css", "reset"
    ],
    "maintainers": [
        {
            "name": "Eric Meyer",
-           "web": "http://meyerweb.com//" 
+           "web": "http://meyerweb.com//"
        }
    ]
 }

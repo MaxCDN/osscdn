@@ -14,12 +14,12 @@
        {
            "name": "Luke Shumard",
            "web": "http://www.lukeshumard.com"
-       } 
+       }
    ],
    "repositories": [
        {
            "type": "git",
-           "url": "https://github.com/paulirish/infinite-scroll" 
-       } 
+           "url": "https://github.com/paulirish/infinite-scroll"
+       }
    ]
 }
