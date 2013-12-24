@@ -56,20 +56,6 @@ ul li {
     padding: 0.5em;
 }
 
-ul li img {
-    width: 60px;
-    height: 60px;
-    float: left;
-    border: none;
-}
-
-ul li p {
-    margin-left: 75px;
-    font-weight: bold;
-    padding-top: 12px;
-    color: #6e7a7f;
-}
-
 .extra {
     margin-top: 1em;
 }
@@ -106,16 +92,27 @@ ul li p {
     display: inline;
 }
 
-.library .author {
-    float: right;
-}
-
 .library .versionSelector {
     margin-left: 1em;
 }
 
 .library .description {
     margin: 1em 0.5em 1em 0.5em;
+}
+
+.library .extras {
+    float: right;
+}
+
+.library .extras .author {
+    margin-right: 0.5em;
+
+    font-weight: bold;
+}
+
+.library .extras img {
+    margin-left: 0.25em;
+    margin-right: 0.25em;
 }
 
 .library .files {
