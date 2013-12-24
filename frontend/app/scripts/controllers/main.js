@@ -19,7 +19,12 @@ angular.module('osscdnApp').controller('MainCtrl', function ($scope, $http, $sta
     };
 
     $scope.getLibraries = function() {
-        $scope.libraries.filtered.forEach(getLibrary);
+        if($scope.libraries.filtered) {
+            $scope.libraries.filtered.forEach(getLibrary);
+        }
+        else {
+            console.warn('Missing library data!');
+        }
     };
 
     function getLibrary(library) {
