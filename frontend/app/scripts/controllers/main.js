@@ -18,7 +18,7 @@ angular.module('osscdnApp').controller('MainCtrl', function ($scope, $http) {
 
     $scope.getLibraries = function() {
         $scope.libraries.filtered.forEach(getLibrary);
-    }
+    };
 
     function getLibrary(library) {
         if(library.description) {

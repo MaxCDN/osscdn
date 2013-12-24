@@ -15,6 +15,14 @@
             Versions <b class="caret"></b>
         </a>
       </div>
+      <ul>
+      <li class="versions" ng-repeat="(version, files) in library.cdn" ng-show="library.selectedVersion.value == version">
+        <div class="version">{{version}}</div>
+        <ul class="files">
+          <li class="file" ng-repeat="file in files track by $index"><a href="//oss.maxcdn.com/libs/{{library.name}}/{{version}}/{{file}}">//oss.maxcdn.com/libs/{{library.name}}/{{version}}/{{file}}</a></li>
+        </ul>
+      </li>
+      </ul>
     </li>
   </ul>
 </div>
