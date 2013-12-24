@@ -9,7 +9,11 @@
     <li class="library" ng-repeat="library in libraries | filter:search | orderBy:orderByName | limitTo:10" ng-click="getLibrary($index, library)" ng-class="{visible: show}">
       <h4 class="name">{{library.name}}</h4>
       <div class="btn-group versionSelector">
-        <button type="button" class="btn btn-default" bs-dropdown="{{library.versions}}">Versions <b class="caret"></b></button>
+        <a href='' title=''
+            dropdown-select="library.versions"
+            dropdown-model="library.selectedVersion">
+            Versions <b class="caret"></b>
+        </a>
       </div>
     </li>
   </ul>

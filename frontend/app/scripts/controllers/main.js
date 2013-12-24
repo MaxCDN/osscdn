@@ -1,20 +1,22 @@
 'use strict';
 
-angular.module('osscdnApp').controller('MainCtrl', function ($scope, $http, $window) {
+angular.module('osscdnApp').controller('MainCtrl', function ($scope, $http) {
     $http.get('data/index.json').then(function(res) {
         // XXX: mock dropdown data
-        $scope.$alert = $window.alert.bind(null);
         $scope.libraries = res.data.map(function(v) {
             v.versions = [
                 {
-                    "text": "demo",
-                    "click": "$alert('demo')"
+                    text: 'demo',
+                    value: 'one'
                 },
                 {
-                    "text": "demo2",
-                    "click": "$alert('demo')"
+                    text: 'demo2',
+                    value: 'two'
                 }
             ];
+            v.selectedVersion = {
+                text: 'select a version'
+            };
 
             return v;
         });

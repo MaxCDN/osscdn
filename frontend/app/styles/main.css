@@ -60,7 +60,6 @@ ul li {
     border-bottom: 1px solid #ddd;
     padding: 10px;
     margin: 0;
-    overflow: hidden;
 }
 
 ul li img {
@@ -79,6 +78,15 @@ ul li p {
 
 .extra {
     margin-top: 1em;
+}
+
+.dropdown {
+    z-index: 10;
+}
+
+.dropdown:before, .dropdown:after {
+    right: inherit;
+    left: 2em;
 }
 
 .libraries {
@@ -101,11 +109,10 @@ ul li p {
 }
 
 .library .name {
-    float: left;
+    display: inline;
 }
 
 .library .versionSelector {
-    float: left;
 
     margin-left: 1em;
 }
