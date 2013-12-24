@@ -106,6 +106,10 @@ ul li p {
     display: inline;
 }
 
+.library .author {
+    float: right;
+}
+
 .library .versionSelector {
     margin-left: 1em;
 }
