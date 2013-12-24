@@ -1,13 +1,20 @@
 'use strict';
 
-angular.module('osscdnApp', ['ngAnimate', 'ngRoute', 'ngDropdowns']).
-        config(function($locationProvider, $routeProvider) {
+angular.module('osscdnApp', ['ngAnimate', 'ui.router', 'ngDropdowns']).
+        config(function($locationProvider, $stateProvider, $urlRouterProvider) {
     $locationProvider.html5Mode(true);
 
-    $routeProvider.when('/', {
+    $urlRouterProvider.otherwise('/');
+
+    $stateProvider.state('libraries', {
+        url: '/',
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
-    }).otherwise({
-        redirectTo: '/'
+    }).state('network', {
+        url: '/network',
+        templateUrl: 'views/network.html'
+    }).state('about', {
+        url: '/about',
+        templateUrl: 'views/about.html'
     });
 });

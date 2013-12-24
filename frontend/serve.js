@@ -28,7 +28,7 @@ function main() {
         app.use(express.errorHandler());
     });
 
-    app.get('/', function(req, res) {
+    app.use(function(req, res) {
         res.sendfile(__dirname + '/dist/index.html');
     });
 
@@ -36,7 +36,7 @@ function main() {
 
     ['SIGHUP', 'SIGINT', 'SIGQUIT', 'SIGILL', 'SIGTRAP', 'SIGABRT', 'SIGBUS',
     'SIGFPE', 'SIGUSR1', 'SIGSEGV', 'SIGUSR2', 'SIGPIPE', 'SIGTERM'
-    ].forEach(function(element, index, array) {
+    ].forEach(function(element) {
         process.on(element, function() { terminator(element); });
     });
 
