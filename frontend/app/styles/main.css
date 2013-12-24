@@ -97,6 +97,10 @@ ul {
     max-height: 15em;
 }
 
+.library .files.full {
+    max-height: 30em;
+}
+
 .library .file:nth-child(odd) {
     background-color: #f9f9f9;
 }
@@ -107,6 +111,10 @@ ul {
 
 .library .file {
     border-bottom: 0.1em solid #ddd;
+}
+
+.library .show {
+    text-align: center;
 }
 
 .loader {
