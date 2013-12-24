@@ -14,11 +14,10 @@ a:hover{
 /*-------------------------
     The search input
 --------------------------*/
-#s {
+.search {
     width: 90%;
     margin: 0 auto;
-    padding: 20px;
-    margin-bottom: 15px;
+    margin-bottom: 1.5em;
     font-size: 1.2em;
 }
 
