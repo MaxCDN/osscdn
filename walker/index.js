@@ -135,6 +135,8 @@ function walk(root, cb) {
 }
 
 function write(output, exclude, d) {
+    exclude = exclude || [];
+
     d = d.filter(function(v) {
         return exclude.indexOf(v.name) === -1;
     });
