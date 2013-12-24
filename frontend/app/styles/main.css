@@ -14,34 +14,13 @@ a:hover{
 /*-------------------------
     The search input
 --------------------------*/
-
-.search {
+#s {
     width: 90%;
-    box-shadow: 0 1px 1px #ccc;
-    border-radius: 2px;
-    padding: 14px;
-    margin: 45px auto 20px;
-    position: relative;
+    margin: 0 auto;
+    padding: 20px;
+    margin-bottom: 15px;
 }
 
-.search input {
-    background: #fff no-repeat 13px 13px;
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAWlBMVEWHmKCHmKCHmKCHmKCHmKCHmKCHmKCHmKCHmKCHmKCHmKCHmKCHmKCHmKCHmKCHmKCHmKCHmKCHmKCHmKCHmKCHmKCHmKCHmKCHmKCHmKCHmKCHmKCHmKCHmKBNnrrDAAAAHnRSTlMAAgUaJCYpKy4wMmBiam5xc3Z6f4SJrba5vsXHyswZmlxOAAAAe0lEQVR4AV3M2w6CQAxF0c1lQHC4CTgIPf//m2bSF2U9NTvNAaj3pLTXOMp4Kbti4WGRTU3RTKaFrJP1ZL2pA9g04AZtAEkVrlICuFTiStn94/CNiIu+0el8kLWn/HjJxkAYTVp9azA5L0DYD723dvXyI5f5Xj78mc/nFz8cCbx5SV/CAAAAAElFTkSuQmCC);
-
-    border: none;
-    width: 100%;
-    line-height: 19px;
-    padding: 11px 0;
-
-    border-radius: 2px;
-    box-shadow: 0 2px 8px #c4c4c4 inset;
-    text-align: left;
-    font-size: 14px;
-    font-family: inherit;
-    font-weight: bold;
-    color: #738289;
-    text-indent: 40px;
-}
 
 ul {
     list-style-type: none;
