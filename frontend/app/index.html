@@ -23,16 +23,17 @@
       <script src="bower_components/es5-shim/es5-shim.js"></script>
       <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
-
-    <header>
-     <img src="./images/osscdn-logo.png" alt="logo" width="345" height="120">
-
-     <ul class="nav nav-tabs">
-      <li><a class="active" ui-sref="libraries">Libraries</a></li>
-      <li><a ui-sref="network">Network</a></li>
-      <li><a ui-sref="about">About</a></li>
-     </ul>
-    </header>
+    <div class="container">
+      <header>
+        <h1><a href="http://osscdn.com"> <img src="./images/osscdn-logo.png" alt="logo" width="345" height="120"></a></h1>
+      	<nav>
+    	  	<ul>
+    	  		<li><a href="network.php">Network</a></li>
+    		  	<li><a href="about.php">About</a></li>
+    		  	<li><a target="_blank" href="">Github <i class="icon-share-alt icon-white"></i></a></li>
+    	  	</ul>
+    	  </nav>
+     </header>
 
     <article class="container" ui-view><article>
 
@@ -52,5 +53,6 @@
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/main.js"></script>
     <!-- endbuild -->
+    </div>
   </body>
 </html>
