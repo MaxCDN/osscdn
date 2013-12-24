@@ -6,11 +6,6 @@ body {
     text-align: center;
 }
 
-a,
-a:visited {
-    color: #00AE3B;
-}
-
 a:hover{
     text-decoration: none;
 }
@@ -56,9 +51,9 @@ ul {
 }
 
 ul li {
-    border-bottom: 1px solid #ddd;
+    box-sizing: border-box;
+
     padding: 0.5em;
-    margin: 0;
 }
 
 ul li img {
@@ -118,6 +113,18 @@ ul li p {
 .library .files {
     overflow: auto;
     max-height: 15em;
+}
+
+.library .file:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+.library .file:nth-of-type(1) {
+    border-top: 0.1em solid #ddd;
+}
+
+.library .file {
+    border-bottom: 0.1em solid #ddd;
 }
 
 .loader {
