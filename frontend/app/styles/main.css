@@ -50,14 +50,12 @@ ul {
     text-align: left;
 }
 
-ul li {
-    box-sizing: border-box;
-
-    padding: 0.5em;
-}
-
 .extra {
     margin-top: 1em;
+}
+
+.wrap-dd-select {
+    padding: 0.25em;
 }
 
 .dropdown {
@@ -73,14 +71,13 @@ ul li {
     width: 90%;
 }
 
-.library {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+.library, .file {
+    box-sizing: border-box;
 
+    padding: 0.5em;
+}
+
+.library {
     margin-bottom: 1em;
 
     background-color: white;
