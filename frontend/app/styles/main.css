@@ -146,3 +146,35 @@ ul {
 footer {
     padding-top: 20px;
 }
+
+#logo {
+    width: 400px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    float:left;
+}
+
+nav {
+    position: relative;
+    top: 0.3em;
+    float: right;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    margin-right: 40px;
+}
+nav ul li {
+    display: inline;
+    background: #e3e3e3;
+    cursor: pointer;
+    border-radius: .3em;
+    padding: 1em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    margin-right: 10px;
+}
+nav ul li:hover { background: #005494 }
+nav ul li:hover a { color: white }
+nav ul li a { color: #575757 }
+nav ul li a:hover { text-decoration: none }
