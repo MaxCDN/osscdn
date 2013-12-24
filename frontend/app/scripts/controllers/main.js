@@ -1,7 +1,9 @@
 'use strict';
 
-angular.module('osscdnApp').controller('MainCtrl', function ($scope, $http) {
-    $scope.search = {};
+angular.module('osscdnApp').controller('MainCtrl', function ($scope, $http, $state) {
+    $scope.search = {
+        name: $state.params.name
+    };
     $scope.libraries = [];
 
     $http.get('data/index.json').then(function(res) {
