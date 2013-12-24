@@ -27,7 +27,7 @@
           </ul>
         </li>
       </ul>
-      <div class="show" ng-switch on="library.showing">
+      <div class="show" ng-if="hasEnoughItems(library)" ng-switch on="library.showing">
         <div class="less" ng-switch-when="true" ng-click="library.showing = false">Show less</div>
         <div class="more" ng-switch-default ng-click="library.showing = true">Show more</div>
       </div>

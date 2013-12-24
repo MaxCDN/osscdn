@@ -31,6 +31,17 @@ angular.module('osscdnApp').controller('MainCtrl', function ($scope, $http, $sta
         }
     };
 
+    $scope.hasEnoughItems = function(library) {
+        if(!library.selectedVersion) {
+            return;
+        }
+
+        // it would be better to calculate visibility status via CSS
+        var version = library.selectedVersion.value;
+
+        return library.cdn[version].length > 6;
+    };
+
     function getLibrary(library) {
         if(library.description) {
             return;
