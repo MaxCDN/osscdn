@@ -20,12 +20,12 @@
         <a class="homepage" href="{{library.homepage}}"><img src="./images/web.png" alt="homepage" width="26" height="26"></a>
       </div>
       <div class="description">{{library.description}}</div>
-      <ul>
-      <li class="versions" ng-repeat="(version, files) in library.cdn" ng-show="library.selectedVersion.value == version">
-        <ul class="files" ng-class="{full: library.showing}">
-          <li class="file" ng-repeat="file in files track by $index"><a href="//oss.maxcdn.com/libs/{{library.name}}/{{version}}/{{file}}">//oss.maxcdn.com/libs/{{library.name}}/{{version}}/{{file}}</a></li>
-        </ul>
-      </li>
+      <ul class="versions">
+        <li class="version" ng-repeat="(version, files) in library.cdn" ng-show="library.selectedVersion.value == version">
+          <ul class="files" ng-class="{full: library.showing}">
+            <li class="file" ng-repeat="file in files track by $index"><a href="//oss.maxcdn.com/libs/{{library.name}}/{{version}}/{{file}}">//oss.maxcdn.com/libs/{{library.name}}/{{version}}/{{file}}</a></li>
+          </ul>
+        </li>
       </ul>
       <div class="show" ng-switch on="library.showing">
         <div class="less" ng-switch-when="true" ng-click="library.showing = false">Show less</div>
