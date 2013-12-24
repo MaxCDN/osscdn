@@ -93,6 +93,11 @@ ul {
 }
 
 .library .files {
+    -moz-transition: 0.25s linear all;
+    -webkit-transition: 0.25s linear all;
+    -o-transition: 0.25s linear all;
+    transition: 0.25s linear all;
+
     overflow: auto;
     max-height: 15em;
 }
