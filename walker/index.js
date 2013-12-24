@@ -114,7 +114,7 @@ function walk(root, cb) {
                     }).on('error', cb).on('done', cb.bind(null, null, ret)).walk();
                 },
                 function(ret, cb) {
-                    ret.hits = 0; // TODO: fetch this through API
+                    //ret.hits = 0; // TODO: fetch this through API
 
                     cb(null, ret);
                 }
