@@ -1,13 +1,17 @@
 'use strict';
 
 angular.module('osscdnApp').controller('MainCtrl', function ($scope, $http, $state) {
-    $scope.search = {
-        name: $state.params.name
-    };
+    $scope.search = {};
     $scope.libraries = [];
+    $scope.limit = 10;
 
     $http.get('data/index.json').then(function(res) {
         $scope.libraries = res.data;
+
+        if($state.params.name) {
+            $scope.search.name = $state.params.name;
+            $scope.limit = 1;
+        }
     });
 
     $scope.orderByName = function(library) {

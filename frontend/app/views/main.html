@@ -1,11 +1,11 @@
-<input id="s" type="text" ng-model="search.name" autofocus placeholder="Search" class="form-control">
+<input id="s" type="text" ng-model="search.name" ng-keydown="limit=10" autofocus placeholder="Search" class="form-control">
 
 
 <div class="loader" ng-hide="libraries">Loading</div>
 
 <div class="results" ng-show="libraries">
   <ul class="libraries">
-    <li class="library" ng-repeat="library in libraries | filter:search | orderBy:orderByName | limitTo:10 | as:'libraries.filtered'" repeat-done="getLibraries">
+    <li class="library" ng-repeat="library in libraries | filter:search | orderBy:orderByName | limitTo:limit | as:'libraries.filtered'" repeat-done="getLibraries">
       <h4 class="name"><a href="/#/{{library.name}}">{{library.name}}</a></h4>
       <div class="btn-group versionSelector">
         <a href='' title=''
