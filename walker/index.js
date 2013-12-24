@@ -94,7 +94,7 @@ function walk(root, cb) {
                             return cb(null, ret);
                         }
 
-                        ret.github = repoUrl;
+                        ret.github = repoUrl.split('.git')[0];
                         ret.stars = stars;
 
                         cb(null, ret);
