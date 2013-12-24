@@ -114,6 +114,10 @@ ul li p {
     margin-left: 1em;
 }
 
+.library .description {
+    margin: 1em 0.5em 1em 0.5em;
+}
+
 .library .files {
     overflow: auto;
     max-height: 15em;
