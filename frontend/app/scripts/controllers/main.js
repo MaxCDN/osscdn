@@ -40,7 +40,7 @@ angular.module('osscdnApp').controller('MainCtrl', function ($scope, $http, $sta
                     text: version,
                     value: version
                 };
-            });
+            }).reverse();
 
             library.selectedVersion = library.versions[0];
         });
