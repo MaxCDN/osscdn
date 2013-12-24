@@ -6,7 +6,7 @@
 
 <div class="results" ng-show="libraries">
   <ul class="libraries">
-    <li class="library" ng-repeat="library in libraries | filter:search | orderBy:orderByName | limitTo:10" ng-click="getLibrary($index, library)" ng-class="{visible: show}">
+    <li class="library" ng-repeat="library in libraries | filter:search | orderBy:orderByName | limitTo:10 | as:'libraries.filtered'" repeat-done="getLibraries">
       <h4 class="name">{{library.name}}</h4>
       <div class="btn-group versionSelector">
         <a href='' title=''

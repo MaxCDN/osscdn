@@ -1,25 +1,11 @@
 'use strict';
 
 angular.module('osscdnApp').controller('MainCtrl', function ($scope, $http) {
-    $http.get('data/index.json').then(function(res) {
-        // XXX: mock dropdown data
-        $scope.libraries = res.data.map(function(v) {
-            v.versions = [
-                {
-                    text: 'demo',
-                    value: 'one'
-                },
-                {
-                    text: 'demo2',
-                    value: 'two'
-                }
-            ];
-            v.selectedVersion = {
-                text: 'select a version'
-            };
+    $scope.search = {};
+    $scope.libraries = [];
 
-            return v;
-        });
+    $http.get('data/index.json').then(function(res) {
+        $scope.libraries = res.data;
     });
 
     $scope.orderByName = function(library) {
@@ -30,10 +16,12 @@ angular.module('osscdnApp').controller('MainCtrl', function ($scope, $http) {
         return library.name;
     };
 
-    $scope.getLibrary = function($index, library) {
-        library.showExtra =! library.showExtra;
+    $scope.getLibraries = function() {
+        $scope.libraries.filtered.forEach(getLibrary);
+    }
 
-        if(library.description || !library.showExtra) {
+    function getLibrary(library) {
+        if(library.description) {
             return;
         }
 
@@ -44,6 +32,35 @@ angular.module('osscdnApp').controller('MainCtrl', function ($scope, $http) {
             for(k in d) {
                 library[k] = d[k];
             }
+
+            library.versions = Object.keys(library.cdn).map(function(version) {
+                return {
+                    text: version,
+                    value: version
+                };
+            });
+
+            library.selectedVersion = library.versions[0];
         });
+    }
+});
+
+angular.module('osscdnApp').filter('as', function($parse) {
+    return function(value, path) {
+        return $parse(path).assign(this, value);
+    };
+});
+
+angular.module('osscdnApp').directive('repeatDone', function() {
+    return {
+        restrict: 'A',
+        scope: {
+            method: '&repeatDone'
+        },
+        link: function($scope) {
+            if($scope.$parent.$last) {
+                $scope.method()();
+            }
+        }
     };
 });
