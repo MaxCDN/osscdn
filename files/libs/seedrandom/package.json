@@ -1,0 +1,22 @@
+{
+    "name": "seedrandom",
+    "filename": "seedrandom.min.js",
+    "version": "2.2",
+    "description": "seeded random number generator for Javascript",
+    "homepage": "https://github.com/davidbau/seedrandom",
+    "keywords": [
+        "random number",
+        "seed"
+    ],
+    "maintainers": [
+        {
+            "name": "David Bau"
+        }
+    ],
+   "repositories": [
+       {
+           "type": "git",
+           "url": "https://github.com/davidbau/seedrandom.git"
+       }
+   ]
+}
