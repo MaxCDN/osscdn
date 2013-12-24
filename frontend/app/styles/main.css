@@ -120,6 +120,8 @@ ul {
 
 .library .show {
     text-align: center;
+
+    cursor: pointer;
 }
 
 .loader {
