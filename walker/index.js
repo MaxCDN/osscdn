@@ -65,9 +65,16 @@ function walk(root, cb) {
                 return cb();
             }
 
+            var author = d.author && d.author.name;
+
+            if(!author && d.maintainers) {
+                author = d.maintainers[0].name;
+            }
+
             async.waterfall([
                 function(cb) {
                     var ret = {
+                        author: author,
                         name: d.name,
                         version: d.version,
                         description: d.description,
