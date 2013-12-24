@@ -25,7 +25,7 @@ function main() {
     if(!program.input) return console.error('Missing input!');
     if(!program.output) return console.error('Missing output!');
 
-    var config = {github: ''};
+    var config = {github: '', exclude: []};
 
     try {
         config = require('./' + program.config);
@@ -41,7 +41,7 @@ function main() {
         };
     }
 
-    walk(program.input, utils.catchError(write.bind(null, program.output)));
+    walk(program.input, utils.catchError(write.bind(null, program.output, config.exclude)));
 }
 
 function walk(root, cb) {
@@ -127,7 +127,11 @@ function walk(root, cb) {
     });
 }
 
-function write(output, d) {
+function write(output, exclude, d) {
+    d = d.filter(function(v) {
+        return exclude.indexOf(v.name) === -1;
+    });
+
     var indexData = d.map(function(v) {
         return {
             name: v.name,
