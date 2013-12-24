@@ -25,7 +25,7 @@ function main() {
     if(!program.input) return console.error('Missing input!');
     if(!program.output) return console.error('Missing output!');
 
-    var config = {github: ''};
+    var config = {github: '', exclude: []};
 
     try {
         config = require('./' + program.config);
@@ -41,7 +41,7 @@ function main() {
         };
     }
 
-    walk(program.input, utils.catchError(write.bind(null, program.output)));
+    walk(program.input, utils.catchError(write.bind(null, program.output, config.exclude)));
 }
 
 function walk(root, cb) {
@@ -65,9 +65,16 @@ function walk(root, cb) {
                 return cb();
             }
 
+            var author = d.author && d.author.name;
+
+            if(!author && d.maintainers) {
+                author = d.maintainers[0].name;
+            }
+
             async.waterfall([
                 function(cb) {
                     var ret = {
+                        author: author,
                         name: d.name,
                         version: d.version,
                         description: d.description,
@@ -87,6 +94,7 @@ function walk(root, cb) {
                             return cb(null, ret);
                         }
 
+                        ret.github = repoUrl.split('.git')[0];
                         ret.stars = stars;
 
                         cb(null, ret);
@@ -113,7 +121,7 @@ function walk(root, cb) {
                     }).on('error', cb).on('done', cb.bind(null, null, ret)).walk();
                 },
                 function(ret, cb) {
-                    ret.hits = 0; // TODO: fetch this through API
+                    //ret.hits = 0; // TODO: fetch this through API
 
                     cb(null, ret);
                 }
@@ -126,7 +134,13 @@ function walk(root, cb) {
     });
 }
 
-function write(output, d) {
+function write(output, exclude, d) {
+    exclude = exclude || [];
+
+    d = d.filter(function(v) {
+        return exclude.indexOf(v.name) === -1;
+    });
+
     var indexData = d.map(function(v) {
         return {
             name: v.name,

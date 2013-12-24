@@ -11,6 +11,7 @@
     <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
 
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/angular-dropdowns/css/dropdowns.css">
     <link rel="stylesheet" href="styles/main.css">
   </head>
   <body ng-app="osscdnApp">
@@ -22,28 +23,35 @@
       <script src="bower_components/es5-shim/es5-shim.js"></script>
       <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
+    <div class="container">
+      <header>
+        <div id="logo"><a href="/#/"> <img src="./images/osscdn-logo.png" alt="logo" width="345" height="120"></a></div>
+        <nav class="btn-group" style="margin-right: 50px;">
+            <a target="_blank" href="http://www.maxcdn.com/company/network/"><button type="button" class="btn btn-default">Network</button></a>
+            <a href="/#/about"><button type="button" class="btn btn-default">About</button></a>
+            <a target="_blank" href="https://github.com/MaxCDN/osscdn"><button type="button" class="btn btn-default">GitHub <i class="icon-share-alt icon-white"></i></button></a>
+        </nav>
+      </header>
 
-    <header>
-     <img src="./images/osscdn-logo.png" alt="logo" width="345" height="120">
-    </header>
+      <article class="container" ui-view></article>
 
-    <article class="container" ng-view=""></article>
-
-    <footer>
-      <p>Brought to you by your friends at <a href="http://www.maxcdn.com">MaxCDN</a></p>
-    </footer>
+      <footer>
+        <p>Brought to you by your friends at <a href="http://www.maxcdn.com">MaxCDN</a></p>
+        <p>Powered by <a href="http://www.jsdelivr.com">jsDelivr</a></p>
+      </footer>
+    </div>
 
     <script src="bower_components/angular/angular.min.js"></script>
-    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
-    <script src="bower_components/angular-route/angular-route.min.js"></script>
+
+    <!-- build:js scripts/modules.js -->
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/angular-dropdowns/dist/angular-dropdowns.js"></script>
+    <!-- endbuild -->
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/main.js"></script>
-    <script src="scripts/services/Paginator.js"></script>
-    <script src="scripts/directives/paginator.js"></script>
-    <script src="scripts/filters/forLoop.js"></script>
-    <script src="scripts/filters/paginate.js"></script>
     <!-- endbuild -->
   </body>
 </html>
