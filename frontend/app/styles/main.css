@@ -40,6 +40,9 @@ ul {
 
 .dropdown {
     z-index: 10;
+
+    overflow: auto;
+    max-height: 20em;
 }
 
 .dropdown:before, .dropdown:after {
