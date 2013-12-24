@@ -112,24 +112,14 @@ ul li p {
 }
 
 .library .versionSelector {
-
     margin-left: 1em;
 }
 
-.library.visible {
-    background-color: #ccc;
+.library .files {
+    overflow: auto;
+    max-height: 15em;
 }
 
-.displayHelp {
-    float: right;
-    color: #aaa;
-    display: none;
-    cursor: pointer;
-}
-
-.label {
-    margin-right: 0.5em;
-}
 .loader {
     text-align: center;
 }
