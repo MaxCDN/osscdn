@@ -57,8 +57,7 @@ footer {
 
 .search {
     width: 90%;
-    margin: 0 auto;
-    margin-bottom: 1.5em;
+    margin: 0 auto 1.5em auto;
     font-size: 1.2em;
     height: 43px
 }
@@ -111,7 +110,7 @@ footer {
 }
 
 .library .description {
-    margin: 1em 0.5em 1em 0.5em;
+    margin: 1em 0.5em;
 }
 
 .library .extras {
