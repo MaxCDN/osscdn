@@ -23,25 +23,6 @@ nav {
     float: right;
     margin-right: 50px;
 }
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    margin-right: 40px;
-}
-nav ul li {
-    display: inline;
-    background-color: #e3e3e3;
-    cursor: pointer;
-    border-radius: 0.3em;
-    padding: 1em;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    margin-right: 10px;
-}
-nav ul li:hover { background-color: #005494; }
-nav ul li:hover a { color: white; }
-nav ul li a { color: #575757; }
-nav ul li a:hover { text-decoration: none; }
 
 .logo {
     width: 400px;
