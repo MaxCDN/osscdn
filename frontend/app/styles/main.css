@@ -20,7 +20,6 @@ ul {
 nav {
     position: relative;
     top: 0.3em;
-    float: right;
     margin-right: 50px;
 }
 
@@ -28,7 +27,6 @@ nav {
     width: 400px;
     margin-left: 50px;
     margin-bottom: 20px;
-    float: left;
 }
 
 footer {
@@ -70,7 +68,6 @@ footer {
 
 .library,
 .file {
-    box-sizing: border-box;
     padding: 0.5em;
 }
 
@@ -94,13 +91,8 @@ footer {
     margin: 1em 0.5em;
 }
 
-.library .extras {
-    float: right;
-}
-
 .library .extras .author {
     margin-right: 0.5em;
-
     font-weight: bold;
 }
 
@@ -110,8 +102,8 @@ footer {
 }
 
 .library .files {
-    -moz-transition: 0.25s linear all;
     -webkit-transition: 0.25s linear all;
+    -moz-transition: 0.25s linear all;
     -o-transition: 0.25s linear all;
     transition: 0.25s linear all;
 
@@ -137,7 +129,6 @@ footer {
 
 .library .show {
     text-align: center;
-
     cursor: pointer;
 }
 
