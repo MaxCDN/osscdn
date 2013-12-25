@@ -1,6 +1,9 @@
 #!/usr/bin/env node
-var path = require('path');
+/* jshint browser:false, latedef:false */
 
+'use strict';
+
+var path = require('path');
 var express = require('express');
 
 
@@ -46,7 +49,7 @@ function main() {
 }
 
 function terminator(sig) {
-    if(typeof sig === "string") {
+    if(typeof sig === 'string') {
         console.log('%s: Received %s - terminating Node server ...',
             Date(Date.now()), sig);
 

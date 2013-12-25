@@ -38,11 +38,11 @@ angular.module('osscdnApp').service('Paginator', function() {
     };
 
     this.isFirstPage = function () {
-        return this.page == 0;
+        return this.page === 0;
     };
 
     this.isLastPage = function () {
-        return this.page == this.pageCount() - 1;
+        return this.page === this.pageCount() - 1;
     };
 
     this.pageCount = function () {
