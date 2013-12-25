@@ -96,9 +96,11 @@ footer {
     font-weight: bold;
 }
 
-.library .extras img {
+.library .extras a {
     margin-left: 0.25em;
     margin-right: 0.25em;
+    vertical-align: middle;
+    color: #333;
 }
 
 .library .files {
