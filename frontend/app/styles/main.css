@@ -10,24 +10,56 @@ a:hover{
     text-decoration: none;
 }
 
+ul {
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    text-align: left;
+}
 
-/*-------------------------
-    The search input
---------------------------*/
+nav {
+    position: relative;
+    top: 0.3em;
+    float: right;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    margin-right: 40px;
+}
+nav ul li {
+    display: inline;
+    background-color: #e3e3e3;
+    cursor: pointer;
+    border-radius: 0.3em;
+    padding: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    margin-right: 10px;
+}
+nav ul li:hover { background-color: #005494; }
+nav ul li:hover a { color: white; }
+nav ul li a { color: #575757; }
+nav ul li a:hover { text-decoration: none; }
+
+.logo {
+    width: 400px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    float: left;
+}
+
+footer {
+    padding-top: 20px;
+}
+
+
 .search {
     width: 90%;
     margin: 0 auto;
     margin-bottom: 1.5em;
     font-size: 1.2em;
     height: 43px
-}
-
-
-ul {
-    list-style-type: none;
-    margin: 0 auto;
-    padding: 0;
-    text-align: left;
 }
 
 .extra {
@@ -45,7 +77,8 @@ ul {
     max-height: 20em;
 }
 
-.dropdown:before, .dropdown:after {
+.dropdown:before,
+.dropdown:after {
     right: inherit;
     left: 2em;
 }
@@ -54,9 +87,9 @@ ul {
     width: 90%;
 }
 
-.library, .file {
+.library,
+.file {
     box-sizing: border-box;
-
     padding: 0.5em;
 }
 
@@ -161,39 +194,3 @@ ul {
 .lbdiv {
     margin-bottom: 5px;
 }
-
-footer {
-    padding-top: 20px;
-}
-
-#logo {
-    width: 400px;
-    margin-left: 50px;
-    margin-bottom: 20px;
-    float:left;
-}
-
-nav {
-    position: relative;
-    top: 0.3em;
-    float: right;
-}
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    margin-right: 40px;
-}
-nav ul li {
-    display: inline;
-    background: #e3e3e3;
-    cursor: pointer;
-    border-radius: .3em;
-    padding: 1em;
-    padding-top: .5em;
-    padding-bottom: .5em;
-    margin-right: 10px;
-}
-nav ul li:hover { background: #005494 }
-nav ul li:hover a { color: white }
-nav ul li a { color: #575757 }
-nav ul li a:hover { text-decoration: none }
