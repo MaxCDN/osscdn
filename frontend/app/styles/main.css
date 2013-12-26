@@ -1,8 +1,8 @@
 body {
     background-color: #f4f4f4;
     color: #5e5b64;
-    margin: 40px;
     font: 15px/1.3 "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 40px;
     text-align: center;
 }
 
@@ -20,13 +20,14 @@ ul {
 nav {
     position: relative;
     top: 0.3em;
+    margin-bottom: 10px;
     margin-right: 50px;
 }
 
 .logo {
-    width: 400px;
-    margin-left: 50px;
     margin-bottom: 20px;
+    margin-left: 50px;
+    width: 400px;
 }
 
 footer {
@@ -35,9 +36,9 @@ footer {
 
 
 .search {
-    width: 90%;
-    margin: 0 auto 1.5em auto;
     font-size: 1.2em;
+    margin: 0 auto 1.5em auto;
+    width: 90%;
     height: 43px
 }
 
@@ -50,16 +51,15 @@ footer {
 }
 
 .dropdown {
-    z-index: 10;
-
-    overflow: auto;
     max-height: 20em;
+    overflow: auto;
+    z-index: 10;
 }
 
 .dropdown:before,
 .dropdown:after {
-    right: inherit;
     left: 2em;
+    right: inherit;
 }
 
 .libraries {
@@ -72,11 +72,12 @@ footer {
 }
 
 .library {
-    margin-bottom: 1em;
-
     background-color: white;
-    border-radius: 0.2em 0.1em 0.1em 0.1em;
     border: 0.1em solid #e3e3e3;
+    -webkit-border-radius: 0.2em 0.1em 0.1em 0.1em;
+    -moz-border-radius: 0.2em 0.1em 0.1em 0.1em;
+    border-radius: 0.2em 0.1em 0.1em 0.1em;
+    margin-bottom: 1em;
 }
 
 .library .name {
@@ -92,25 +93,25 @@ footer {
 }
 
 .library .extras .author {
-    margin-right: 0.5em;
     font-weight: bold;
+    margin-right: 0.5em;
 }
 
 .library .extras a {
+    color: #333;
     margin-left: 0.25em;
     margin-right: 0.25em;
     vertical-align: middle;
-    color: #333;
 }
 
 .library .files {
     -webkit-transition: 0.25s linear all;
     -moz-transition: 0.25s linear all;
+    -ms-transition: 0.25s linear all;
     -o-transition: 0.25s linear all;
     transition: 0.25s linear all;
-
-    overflow: auto;
     max-height: 15em;
+    overflow: auto;
 }
 
 .library .files.full {
@@ -149,20 +150,22 @@ footer {
     position: relative;
     display: block;
     overflow: hidden;
+    -ms-text-overflow: clip;
+    -o-text-overflow: clip;
     text-overflow: clip;
     white-space: nowrap;
 }
 
 .extra.ng-leave-active,
 .extra.ng-enter {
-    opacity: 0;
     height: 0;
+    opacity: 0;
 }
 
 .extra.ng-leave,
 .extra.ng-enter-active {
-    opacity: 1;
     height: 100%;
+    opacity: 1;
 }
 
 .lbdiv {
