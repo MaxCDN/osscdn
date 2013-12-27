@@ -1,15 +1,39 @@
+'use strict';
+
 var trim = require('trimmer');
 
 
+function getConfig(path) {
+    try {
+        return require('./' + path);
+    } catch(e) {}
+
+    return {
+        github: '',
+        exclude: []
+    };
+};
+exports.getConfig = getConfig;
+
 function parseGh(url) {
-    if(!url) return {};
+    if(!url) {
+        return {};
+    }
 
     var partitions = partition('github.com', url);
 
-    if(partitions.length < 2) partitions = partition('github.io', url);
-    if(partitions.length < 2) return {};
-    if(url.indexOf('git@') == 0) return parseGit(url);
-    if(partitions[0].split('//').filter(id).length > 1) return parseGhPages(partitions);
+    if(partitions.length < 2) {
+        partitions = partition('github.io', url);
+    }
+    if(partitions.length < 2) {
+        return {};
+    }
+    if(url.indexOf('git@') === 0) {
+        return parseGit(url);
+    }
+    if(partitions[0].split('//').filter(id).length > 1) {
+        return parseGhPages(partitions);
+    }
 
     var parts = partitions[1].split('/').filter(id);
     var user = parts[0];
@@ -34,7 +58,7 @@ function parseGit(url) {
     return {
         user: parts[0],
         repo: parseRepo(parts[1])
-    }
+    };
 }
 
 function parseGhPages(parts) {
@@ -45,18 +69,23 @@ function parseGhPages(parts) {
 }
 
 function parseRepo(str) {
-    if(!str) return;
+    if(!str) {
+        return;
+    }
 
     var parts = str.split('.git');
 
-    if(parts.length > 1) return parts.slice(0, -1).join('');
+    if(parts.length > 1) {
+        return parts.slice(0, -1).join('');
+    }
 
     return str;
 }
 
 function partition(chr, str) {
-    if(!chr) return;
-    if(!str) return;
+    if(!chr || !str) {
+        return;
+    }
 
     var parts = str.split(chr);
 
@@ -69,7 +98,9 @@ exports.partition = partition;
 
 function catchError(fn) {
     return function(err, d) {
-        if(err) return console.error(err);
+        if(err) {
+            return console.error(err);
+        }
 
         fn(d);
     };
@@ -77,7 +108,7 @@ function catchError(fn) {
 exports.catchError = catchError;
 
 function endsWith(str, a) {
-    return str.indexOf(a) == str.length - a.length;
+    return str.indexOf(a) === str.length - a.length;
 }
 exports.endsWith = endsWith;
 

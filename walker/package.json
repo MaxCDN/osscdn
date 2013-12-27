@@ -7,6 +7,8 @@
   "scripts": {
     "test": "node ./tests.js"
   },
+  "main": "./lib.js",
+  "bin": "./index.js",
   "author": "Juho Vepsalainen",
   "dependencies": {
     "async": "~0.2.9",
