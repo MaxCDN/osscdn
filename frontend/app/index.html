@@ -7,9 +7,9 @@
     <meta name="description" content="Open Source Software CDN by MaxCDN">
     <meta name="keywords" content="Open Source Software, CDN, MaxCDN, jquery, bootstrap, library, javascript, css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
     <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
 
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="bower_components/angular-dropdowns/css/dropdowns.css">
     <link rel="stylesheet" href="styles/main.css">
@@ -17,19 +17,19 @@
   <body ng-app="osscdnApp">
     <!--[if lt IE 9]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
 
-    <!--[if lt IE 9]>
-      <script src="bower_components/es5-shim/es5-shim.js"></script>
+      <script src="bower_components/es5-shim/es5-shim.min.js"></script>
       <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
     <div class="container">
       <header>
-        <div id="logo"><a href="/#/"> <img src="./images/osscdn-logo.png" alt="logo" width="345" height="120"></a></div>
-        <nav class="btn-group" style="margin-right: 50px;">
-            <a target="_blank" href="http://www.bootstrapcdn.com/"><button type="button" class="btn btn-default">Bootstrap & Font-Awesome</button></a>
-            <a target="_blank" href="http://www.maxcdn.com/company/network/"><button type="button" class="btn btn-default">Network</button></a>
-            <a target="_blank" href="https://github.com/MaxCDN/osscdn"><button type="button" class="btn btn-default">GitHub <i class="icon-share-alt icon-white"></i></button></a>
+        <div class="logo pull-left"><a href="/#/"><img src="images/osscdn-logo.png" alt="logo" width="345" height="120"></a></div>
+        <nav class="pull-right">
+          <ul class="list-inline">
+            <li><a class="btn btn-default" target="_blank" href="http://www.bootstrapcdn.com/">Bootstrap &amp; Font-Awesome</a></li>
+            <li><a class="btn btn-default" target="_blank" href="http://www.maxcdn.com/company/network/">Network</a></li>
+            <li><a class="btn btn-default" target="_blank" href="https://github.com/MaxCDN/osscdn">GitHub <i class="fa fa-share"></i></a></li>
+          </ul>
         </nav>
       </header>
 
@@ -41,9 +41,8 @@
       </footer>
     </div>
 
-    <script src="bower_components/angular/angular.min.js"></script>
-
     <!-- build:js scripts/modules.js -->
+    <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="bower_components/angular-dropdowns/dist/angular-dropdowns.js"></script>
