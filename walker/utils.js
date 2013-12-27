@@ -12,7 +12,7 @@ function getConfig(path) {
         github: '',
         exclude: []
     };
-};
+}
 exports.getConfig = getConfig;
 
 function parseGh(url) {
