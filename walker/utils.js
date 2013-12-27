@@ -3,6 +3,21 @@
 var trim = require('trimmer');
 
 
+function removeDuplicates(property, arr) {
+    var found = {};
+
+    return arr.filter(function(o) {
+        var v = o[property];
+
+        if(!(v in found)) {
+            found[v] = true;
+
+            return true;
+        }
+    });
+}
+exports.removeDuplicates = removeDuplicates;
+
 function getConfig(path) {
     try {
         return require('./' + path);

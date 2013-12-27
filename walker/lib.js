@@ -141,13 +141,13 @@ function write(output, exclude, d) {
         return exclude.indexOf(v.name) === -1;
     });
 
-    var indexData = d.map(function(v) {
+    var indexData = utils.removeDuplicates('name', d.map(function(v) {
         return {
             name: v.name,
             stars: v.stars,
             hits: v.hits
         };
-    });
+    }));
 
     fs.exists(output, function(exists) {
         if(exists) {

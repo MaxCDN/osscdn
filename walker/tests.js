@@ -1,7 +1,17 @@
 #!/usr/bin/env node
+'use strict';
+
+var assert = require('assert');
+
 var suite = require('suite.js');
 
 var utils = require('./utils');
+
+
+assert.deepEqual(
+    utils.removeDuplicates('name', [{name: 'bar'}, {name: 'bar'}]),
+    [{name: 'bar'}]
+);
 
 
 suite(utils.parseGh, [
