@@ -98,16 +98,22 @@ function walk(root, cb) {
                     ret.cdn = cdn;
 
                     walker(dirname).on('file', function(p) {
-                        if(utils.endsWith(p, 'package.json')) return;
+                        if(utils.endsWith(p, 'package.json')) {
+                            return;
+                        }
 
                         var parts = p.split('/');
 
-                        if(parts.length < 2) return;
+                        if(parts.length < 2) {
+                            return;
+                        }
 
                         var version = parts[0];
                         var f = parts.slice(1).join('/');
 
-                        if(!(version in cdn)) cdn[version] = [];
+                        if(!(version in cdn)) {
+                            cdn[version] = [];
+                        }
 
                         cdn[version].push(f);
                     }).on('error', cb).on('done', cb.bind(null, null, ret)).walk();
@@ -119,7 +125,9 @@ function walk(root, cb) {
                 }
             ], cb);
         }, function(err, d) {
-            if(err) return cb(err);
+            if(err) {
+                return cb(err);
+            }
 
             cb(null, d.filter(utils.id));
         });
