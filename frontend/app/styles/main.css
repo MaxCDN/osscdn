@@ -2,8 +2,7 @@ body {
     background-color: #f4f4f4;
     color: #5e5b64;
     font: 15px/1.3 "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    margin: 40px;
-    text-align: center;
+    margin: 40px 20px 20px 20px;
 }
 
 a:hover{
@@ -14,32 +13,32 @@ ul {
     list-style-type: none;
     margin: 0 auto;
     padding: 0;
-    text-align: left;
 }
 
-nav {
-    position: relative;
-    top: 0.3em;
-    margin-bottom: 10px;
-    margin-right: 50px;
-}
-
-.logo {
+header {
     margin-bottom: 20px;
-    margin-left: 50px;
-    width: 400px;
 }
 
 footer {
     padding-top: 20px;
+    text-align: center;
 }
 
+input {
+    margin-bottom: 20px;
+}
 
-.search {
-    font-size: 1.2em;
-    margin: 0 auto 1.5em auto;
-    width: 90%;
-    height: 43px
+/* Bootstrap overrides */
+.container {
+    max-width: 940px;
+}
+
+.list-inline > li {
+    padding: 0;
+}
+
+.logo {
+    margin-bottom: 10px;
 }
 
 .extra {
@@ -62,9 +61,6 @@ footer {
     right: inherit;
 }
 
-.libraries {
-    width: 90%;
-}
 
 .library,
 .file {
@@ -170,4 +166,11 @@ footer {
 
 .lbdiv {
     margin-bottom: 5px;
+}
+
+@media (min-width: 992px) {
+    header .col-md-8,
+    nav > ul {
+        text-align: right;
+    }
 }
