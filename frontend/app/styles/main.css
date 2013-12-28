@@ -30,7 +30,7 @@ input {
     margin-bottom: 20px;
 }
 
-/* Bootstrap overrides */
+/* Bootstrap overrides start */
 .container {
     max-width: 940px;
 }
@@ -38,6 +38,8 @@ input {
 .list-inline > li {
     padding: 0;
 }
+
+/* Bootstrap overrides end */
 
 .logo {
     margin-bottom: 10px;
@@ -97,6 +99,7 @@ input {
 
 .library .extras a {
     color: #333;
+    display: inline-block;
     margin-left: 0.25em;
     margin-right: 0.25em;
     vertical-align: middle;
