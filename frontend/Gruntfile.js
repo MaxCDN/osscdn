@@ -143,7 +143,7 @@ module.exports = function (grunt) {
         htmlmin: {
             dist: {
                 options: {
-                    /*removeCommentsFromCDATA: true,
+                    removeCommentsFromCDATA: true,
                     // https://github.com/yeoman/grunt-usemin/issues/44
                     //collapseWhitespace: true,
                     collapseBooleanAttributes: true,
@@ -151,7 +151,7 @@ module.exports = function (grunt) {
                     removeRedundantAttributes: true,
                     useShortDoctype: true,
                     removeEmptyAttributes: true,
-                    removeOptionalTags: true*/
+                    removeOptionalTags: true
                 },
                 files: [{
                     expand: true,
@@ -175,7 +175,6 @@ module.exports = function (grunt) {
                         'bower_components/**/*',
                         'images/{,*/}*.{gif,webp}',
                         'styles/fonts/*',
-                        'styles/*.css',
                         'images/*.{png,jpg}'
                     ]
                 }, {
@@ -186,23 +185,10 @@ module.exports = function (grunt) {
                         'generated/*'
                     ]
                 }]
-            },
-            styles: {
-                expand: true,
-                cwd: '<%= yeoman.app %>/styles',
-                dest: '.tmp/styles/',
-                src: '{,*/}*.css'
             }
         },
         concurrent: {
-            server: [
-                'copy:styles'
-            ],
-            test: [
-                'copy:styles'
-            ],
             dist: [
-                'copy:styles',
                 'htmlmin'
             ]
         },
