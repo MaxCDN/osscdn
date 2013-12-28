@@ -50,3 +50,8 @@ The instructions below show how to get project dependencies installed and the pr
 ### Production Server
 
 The frontend contains our Node.js based production server. Provided you have installed the project dependencies, simply execute `frontend/serve.js` to get it running. Note that it expects to find the data at `dist/` directory. The directory itself may be generated using `grunt build`. That will wipe the contents of the directory entirely. After this you should symlink your data so that `dist/data` directory points at it.
+
+## License
+
+MIT. See `LICENSE` for details.
+
