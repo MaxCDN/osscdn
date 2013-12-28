@@ -140,6 +140,11 @@ module.exports = function (grunt) {
                 dirs: ['<%= yeoman.dist %>']
             }
         },
+        uglify: {
+            options: {
+                mangle: false
+            }
+        },
         // Put files not handled in other tasks here
         copy: {
             dist: {
