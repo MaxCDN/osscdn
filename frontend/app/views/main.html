@@ -27,7 +27,7 @@
       <ul class="versions">
         <li class="version" ng-repeat="(version, files) in library.cdn" ng-if="library.selectedVersion.value == version">
           <ul class="files" ng-class="{full: library.showing}">
-            <li class="file" ng-repeat="file in files track by $index"><a href="//oss.maxcdn.com/libs/{{library.name}}/{{version}}/{{file}}">//oss.maxcdn.com/libs/{{library.name}}/{{version}}/{{file}}</a></li>
+            <li class="file" ng-repeat="file in files track by $index"><a href="//oss.maxcdn.com/libs/{{library.name}}/{{version}}/{{file}}" target="_blank">//oss.maxcdn.com/libs/{{library.name}}/{{version}}/{{file}}</a></li>
           </ul>
         </li>
       </ul>
