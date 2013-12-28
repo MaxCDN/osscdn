@@ -35,10 +35,10 @@ input {
     max-width: 940px;
 }
 
-.list-inline > li {
-    padding: 0;
+nav > .list-inline > li {
+    padding-left: 2px;
+    padding-right: 2px;
 }
-
 /* Bootstrap overrides end */
 
 .logo {
