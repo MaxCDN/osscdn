@@ -7,7 +7,6 @@
     "angular-dropdowns": "*",
     "angular-route": "1.2.5",
     "angular-ui-router": "~0.2.7",
-    "bootstrap": "~3.0.3",
     "es5-shim": "~2.1.0"
   },
   "devDependencies": {
