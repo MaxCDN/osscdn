@@ -224,6 +224,7 @@ module.exports = function (grunt) {
         'copy:dist',
         'cdnify',
         'ngmin',
+        'cssmin',
         'uglify',
         'rev',
         'usemin'
