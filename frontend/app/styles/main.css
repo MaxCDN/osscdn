@@ -140,6 +140,10 @@ input {
     text-align: center;
 }
 
+.loader i {
+    vertical-align: middle;
+}
+
 /* animations - see http://www.nganimate.org/ */
 .extra.ng-enter,
 .extra.ng-leave {

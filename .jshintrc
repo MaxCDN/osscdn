@@ -6,6 +6,7 @@
   "eqeqeq": true,
   "esnext": true,
   "immed": true,
+  "indent": 4,
   "latedef": false,
   "newcap": true,
   "noarg": true,
@@ -16,7 +17,6 @@
   "trailing": true,
   "undef": true,
   "unused": true,
-  "indent": 4,
   "globals": {
     "angular": true
   }
