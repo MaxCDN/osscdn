@@ -31,7 +31,7 @@ module.exports = function (grunt) {
         watch: {
             styles: {
                 files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
-                tasks: ['copy:styles']
+                tasks: []
             },
             livereload: {
                 options: {
