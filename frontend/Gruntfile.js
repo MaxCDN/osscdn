@@ -188,6 +188,8 @@ module.exports = function (grunt) {
             }
         },
         concurrent: {
+            server: [],
+            test: [],
             dist: [
                 'htmlmin'
             ]
