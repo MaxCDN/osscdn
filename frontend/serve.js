@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/* jshint browser:false, latedef:false */
+/* jshint browser:false */
 
 'use strict';
 

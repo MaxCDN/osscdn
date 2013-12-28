@@ -43,7 +43,7 @@ The instructions below show how to get project dependencies installed and the pr
 4. Execute `npm install` at walker/
 5. Execute `npm install` at frontend/
 6. Execute `bower install` at frontend/
-7. Execute `./generate_data.sh` at project root. This will output some data for frontend to use.
+7. Execute `node ./generate_data.js` at project root. This will output some data for frontend to use.
 8. Execute `cd frontend`
 9. Execute `grunt server`. This will run a development server and open the app in your browser. As you make changes to the project it will refresh the browser automatically.
 
