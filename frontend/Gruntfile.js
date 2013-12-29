@@ -142,7 +142,9 @@ module.exports = function (grunt) {
         },
         uglify: {
             options: {
-                mangle: false
+                mangle: {
+                    except: ['angular']
+                }
             }
         },
         // Put files not handled in other tasks here

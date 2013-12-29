@@ -12,7 +12,6 @@
   "noarg": true,
   "node": true,
   "quotmark": "single",
-  "smarttabs": true,
   "strict": true,
   "trailing": true,
   "undef": true,
