@@ -142,9 +142,15 @@ module.exports = function (grunt) {
         },
         uglify: {
             options: {
-                mangle: {
-                    except: ['angular']
-                }
+                preserveComments: false,
+                report: 'min'
+            },
+            scripts: {
+                options: {
+                    mangle: false
+                },
+                src: '<%= yeoman.app %>/scripts/**/*.js',
+                dest: '<%= yeoman.dist %>/scripts/scripts.js'
             }
         },
         // Put files not handled in other tasks here
@@ -233,6 +239,7 @@ module.exports = function (grunt) {
         'ngmin',
         'cssmin',
         'uglify',
+        'uglify:scripts',
         'rev',
         'usemin'
     ]);
