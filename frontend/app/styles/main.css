@@ -183,6 +183,11 @@ nav > .list-inline > li {
     margin-bottom: 5px;
 }
 
+/* override base color */
+.github-fork-ribbon {
+    background-color: #007200;
+}
+
 @media (min-width: 992px) {
     header .col-md-8,
     nav > ul {
