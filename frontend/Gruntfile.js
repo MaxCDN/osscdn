@@ -153,6 +153,11 @@ module.exports = function (grunt) {
                 dest: '<%= yeoman.dist %>/scripts/scripts.js'
             }
         },
+        cssmin: {
+            options: {
+                report: 'min'
+            }
+        },
         // Put files not handled in other tasks here
         copy: {
             dist: {
