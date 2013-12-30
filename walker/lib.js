@@ -48,6 +48,7 @@ function walk(root, cb) {
                 author = d.maintainers[0].name;
             }
 
+            var gh = utils.parseGh(repoUrl);
             var ret = {
                 author: author,
                 name: d.name,
@@ -55,7 +56,7 @@ function walk(root, cb) {
                 description: d.description,
                 homepage: d.homepage,
                 keywords: d.keywords,
-                github: repoUrl.split('.git')[0]
+                github: 'https://github.com/' + gh.user + '/' + gh.repo
             };
 
             var cdn = {};
