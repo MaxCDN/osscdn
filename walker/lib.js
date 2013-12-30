@@ -63,7 +63,6 @@ function walk(root, cb) {
                 version: d.version,
                 description: d.description,
                 homepage: d.homepage,
-                keywords: d.keywords,
                 github: 'https://github.com/' + gh.user + '/' + gh.repo
             };
 
