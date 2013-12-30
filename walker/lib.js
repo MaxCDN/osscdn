@@ -42,7 +42,11 @@ function walk(root, cb) {
                 return cb();
             }
 
-            var author = d.author && d.author.name;
+            var author = d.author;
+
+            if(author && author.name) {
+                author = author.name;
+            }
 
             if(!author && d.maintainers) {
                 author = d.maintainers[0].name;
