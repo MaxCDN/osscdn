@@ -3,7 +3,6 @@
   "private": true,
   "version": "0.1.0",
   "description": "Walks through package.json files and composites them",
-  "main": "index.js",
   "scripts": {
     "test": "node ./tests.js"
   },
