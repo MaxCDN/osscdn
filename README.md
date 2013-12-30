@@ -1,8 +1,11 @@
 # Open Source Software CDN
 
-OSSCDN is a free CDN powered by [MaxCDN](http://www.maxcdn.com) that hosts all kinds of Open Source projects.
+OSSCDN is a free CDN powered by [MaxCDN](http://www.maxcdn.com)
+that hosts all kinds of Open Source projects.
 
-This includes but not limited to JS libraries, jQuery plugins, Linux Mirrors, executable files and more.
+This includes, but not limited to, JS libraries, jQuery plugins, Linux Mirrors,
+executable files and more.
+
 
 ## Submission Process
 
@@ -17,10 +20,9 @@ This includes but not limited to JS libraries, jQuery plugins, Linux Mirrors, ex
 2. Add or Update the project you wish following the rules and file structure.
 3. Send a Pull Request including a description
 
-
-
 ### Other
-* If you wish to host files larger than 10MB please contact [Justin](https://github.com/jdorfman) or [Dmitriy](https://github.com/jimaek)
+* If you wish to host files larger than 10MB please contact [Justin](https://github.com/jdorfman) or [Dmitriy](https://github.com/jimaek).
+
 
 ## Development
 
@@ -51,7 +53,7 @@ The instructions below show how to get project dependencies installed and the pr
 
 The frontend contains our Node.js based production server. Provided you have installed the project dependencies, simply execute `frontend/serve.js` to get it running. Note that it expects to find the data at `dist/` directory. The directory itself may be generated using `grunt build`. That will wipe the contents of the directory entirely. After this you should symlink your data so that `dist/data` directory points at it.
 
+
 ## License
 
-MIT. See `LICENSE` for details.
-
+OSSCDN code is released under the [MIT License](/LICENSE).
