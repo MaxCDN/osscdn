@@ -20,6 +20,11 @@
             "url": "http://opensource.org/licenses/MIT"
         }
     ],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/odyniec/imgareaselect.git"
+    },
+    "bugs": "https://github.com/odyniec/imgareaselect/issues",
     "dependencies": {
         "jquery": ">=1.4"
     }
