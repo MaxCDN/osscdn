@@ -8,11 +8,9 @@
     "test": "node ./tests.js"
   },
   "main": "./lib.js",
-  "bin": "./index.js",
   "author": "Juho Vepsalainen",
   "dependencies": {
     "async": "~0.2.9",
-    "commander": "~2.1.0",
     "filewalker": "~0.1.2",
     "glob": "~3.2.7",
     "trimmer": "~0.0.3"
