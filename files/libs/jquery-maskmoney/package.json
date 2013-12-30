@@ -33,9 +33,9 @@
     }
   ],
   "bugs": "https://github.com/plentz/jquery-maskmoney/issues",
-  "homepage": "http://plentz.github.com/jquery-maskmoney",
-  "docs": "http://plentz.github.com/jquery-maskmoney",
-  "demo": "http://plentz.github.com/jquery-maskmoney",
+  "homepage": "http://plentz.github.io/jquery-maskmoney",
+  "docs": "http://plentz.github.io/jquery-maskmoney",
+  "demo": "http://plentz.github.io/jquery-maskmoney",
   "download": "https://raw.github.com/plentz/jquery-maskmoney/master/jquery.maskMoney.js",
   "dependencies": {
     "jquery": ">=1.6"

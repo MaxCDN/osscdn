@@ -3,7 +3,7 @@
     "version": "3.2.5",
     "filename": "json3.min.js",
     "description": "A modern JSON implementation compatible with nearly all JavaScript platforms.",
-    "homepage": "http://bestiejs.github.com/json3",
+    "homepage": "http://bestiejs.github.io/json3",
     "main": "json3",
     "keywords": [
         "json",
@@ -22,12 +22,12 @@
     ],
     "author": {
         "name": "Kit Cambridge",
-        "web": "http://kitcambridge.github.com"
+        "web": "http://kitcambridge.github.io"
     },
     "maintainers": [
         {
             "name": "Kit Cambridge",
-            "web": "http://kitcambridge.github.com"
+            "web": "http://kitcambridge.github.io"
         }
     ],
     "bugs": "http://github.com/bestiejs/json3/issues",

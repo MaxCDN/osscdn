@@ -17,7 +17,7 @@
     }
   ],
   "demos": [
-    "http://usablica.github.com/intro.js/"
+    "http://usablica.github.io/intro.js/"
   ],
   "bugs": "https://github.com/usablica/intro.js/issues",
   "repositories": [
@@ -32,5 +32,5 @@
       "url": "https://github.com/usablica/intro.js#license"
     }
   ],
-  "homepage": "http://usablica.github.com/intro.js/"
+  "homepage": "http://usablica.github.io/intro.js/"
 }

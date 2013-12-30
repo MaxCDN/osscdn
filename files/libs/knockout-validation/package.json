@@ -3,7 +3,7 @@
     "filename": "knockout.validation.min.js",
     "version": "1.0.2",
     "description": "A validation library for Knockout JS",
-    "homepage": "http://ericmbarnard.github.com/Knockout-Validation/",
+    "homepage": "http://ericmbarnard.github.io/Knockout-Validation/",
     "keywords": [
         "knockout",
         "mvvm",

@@ -2,7 +2,7 @@
   "name": "angular-ui-bootstrap",
   "description": "Native AngularJS (Angular) directives for Twitter's Bootstrap. Small footprint (5kB gzipped!), no 3rd party JS dependencies (jQuery, bootstrap JS) required!",
   "author": "https://github.com/angular-ui/bootstrap/graphs/contributors",
-  "homepage": "http://angular-ui.github.com/bootstrap/",
+  "homepage": "http://angular-ui.github.io/bootstrap/",
   "keywords": [
     "AngularJS",
     "angular",

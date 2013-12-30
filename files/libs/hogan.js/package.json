@@ -3,7 +3,7 @@
     "filename": "hogan.js",
     "version": "2.0.0",
     "description": "A mustache compiler.",
-    "homepage": "http://twitter.github.com/hogan.js/",
+    "homepage": "http://twitter.github.io/hogan.js/",
     "keywords": ["mustache", "template"],
     "author": "Twitter Inc.",
     "repositories": [

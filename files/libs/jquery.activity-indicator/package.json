@@ -3,7 +3,7 @@
     "filename": "jquery.activity-indicator.min.js",
     "version": "1.0.0",
     "description": "A jQuery plugin that renders a translucent activity indicator (spinner) using SVG or VML.",
-    "homepage": "http://neteye.github.com/activity-indicator.html",
+    "homepage": "http://neteye.github.io/activity-indicator.html",
     "keywords": [
         "jquery",
         "loader",
@@ -13,7 +13,7 @@
         {
             "name": "Felix Gnass",
             "email": "felix.gnass@riotfamily.org",
-            "web": "http://fgnass.github.com/"
+            "web": "http://fgnass.github.io/"
         }
     ],
     "repositories": [
