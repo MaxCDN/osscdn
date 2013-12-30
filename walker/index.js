@@ -23,9 +23,7 @@ function main() {
         return console.error('Missing output!');
     }
 
-    var config = utils.getConfig(program.config);
-
-    var lib = require('./lib')(config);
+    var lib = require('./lib');
 
     lib.walk(
         program.input,

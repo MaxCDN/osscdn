@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 'use strict';
 
+var lib = require('./walker');
+var utils = require('./walker/utils');
+
 
 function main() {
-    var utils = require('./walker/utils');
     var config = utils.getConfig('config.js');
-
-    var lib = require('./walker')(config);
 
     var input = './files';
     var output = './frontend/app/data/';
@@ -18,3 +18,4 @@ function main() {
 }
 
 main();
+

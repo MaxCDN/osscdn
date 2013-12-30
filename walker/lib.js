@@ -8,26 +8,11 @@ var async = require('async');
 var walker = require('filewalker');
 
 var utils = require('./utils');
-var gh;
 
 
-module.exports = function(config) {
-    try {
-        gh = require('./gh')(config.github);
-    } catch(e) {
-        console.warn('Configuration was not provided, generating dummy data for GH');
-
-        gh = {
-            getWatchers: function(o, cb) {
-                cb(null, Math.round(Math.random() * 10000));
-            }
-        };
-    }
-
-    return {
-        walk: walk,
-        write: write
-    };
+module.exports = {
+    walk: walk,
+    write: write
 };
 
 function walk(root, cb) {
@@ -63,67 +48,39 @@ function walk(root, cb) {
                 author = d.maintainers[0].name;
             }
 
-            async.waterfall([
-                function(cb) {
-                    var ret = {
-                        author: author,
-                        name: d.name,
-                        version: d.version,
-                        description: d.description,
-                        homepage: d.homepage,
-                        keywords: d.keywords
-                    };
+            var ret = {
+                author: author,
+                name: d.name,
+                version: d.version,
+                description: d.description,
+                homepage: d.homepage,
+                keywords: d.keywords,
+                github: repoUrl.split('.git')[0]
+            };
 
-                    cb(null, ret);
-                },
-                function(ret, cb) {
-                    var ghQuery = utils.parseGh(repoUrl);
+            var cdn = {};
+            ret.cdn = cdn;
 
-                    gh.getWatchers(ghQuery, function(err, stars) {
-                        if(err) {
-                            console.warn({err: err, ghQuery: ghQuery, repoUrl: repoUrl});
-
-                            return cb(null, ret);
-                        }
-
-                        ret.github = repoUrl.split('.git')[0];
-                        ret.stars = stars;
-
-                        cb(null, ret);
-                    });
-                },
-                function(ret, cb) {
-                    var dirname = path.dirname(file);
-                    var cdn = {};
-                    ret.cdn = cdn;
-
-                    walker(dirname).on('file', function(p) {
-                        if(utils.endsWith(p, 'package.json')) {
-                            return;
-                        }
-
-                        var parts = p.split('/');
-
-                        if(parts.length < 2) {
-                            return;
-                        }
-
-                        var version = parts[0];
-                        var f = parts.slice(1).join('/');
-
-                        if(!(version in cdn)) {
-                            cdn[version] = [];
-                        }
-
-                        cdn[version].push(f);
-                    }).on('error', cb).on('done', cb.bind(null, null, ret)).walk();
-                },
-                function(ret, cb) {
-                    //ret.hits = 0; // TODO: fetch this through API
-
-                    cb(null, ret);
+            walker(path.dirname(file)).on('file', function(p) {
+                if(utils.endsWith(p, 'package.json')) {
+                    return;
                 }
-            ], cb);
+
+                var parts = p.split('/');
+
+                if(parts.length < 2) {
+                    return;
+                }
+
+                var version = parts[0];
+                var f = parts.slice(1).join('/');
+
+                if(!(version in cdn)) {
+                    cdn[version] = [];
+                }
+
+                cdn[version].push(f);
+            }).on('error', cb).on('done', cb.bind(null, null, ret)).walk();
         }, function(err, d) {
             if(err) {
                 return cb(err);
