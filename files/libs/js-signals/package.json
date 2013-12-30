@@ -3,7 +3,7 @@
     "filename": "js-signals.min.js",
     "version": "1.0.0",
     "description": "Custom Event/Messaging system for JavaScript.",
-    "homepage": "http://millermedeiros.github.com/js-signals/",
+    "homepage": "http://millermedeiros.github.io/js-signals/",
     "keywords": [
        "event",
        "messaging",

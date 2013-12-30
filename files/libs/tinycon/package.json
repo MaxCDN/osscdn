@@ -3,7 +3,7 @@
     "filename": "tinycon.min.js",
     "version": "0.5",
     "description": "A small library for manipulating the favicon, in particular adding alert bubbles and changing images..",
-    "homepage": "http://tommoor.github.com/tinycon/",
+    "homepage": "http://tommoor.github.io/tinycon/",
     "keywords": [
        "favicon",
        "Tinycon"

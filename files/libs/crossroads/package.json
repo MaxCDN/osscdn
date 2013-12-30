@@ -3,7 +3,7 @@
   "filename": "crossroads.min.js",
   "version": "0.11.0",
   "description": "Flexible router which can be used in multiple environments",
-  "homepage": "http://millermedeiros.github.com/crossroads.js/",
+  "homepage": "http://millermedeiros.github.io/crossroads.js/",
   "keywords": [
     "routes",
     "event",

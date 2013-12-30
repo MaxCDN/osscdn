@@ -3,7 +3,7 @@
     "filename": "psd.min.js",
     "version": "0.4.5",
     "description": "A Photoshop (PSD) file parser in Javascript/Coffeescript",
-    "homepage": "http://meltingice.github.com/psd.js/",
+    "homepage": "http://meltingice.github.io/psd.js/",
     "keywords": [
        "images",
        "popular",

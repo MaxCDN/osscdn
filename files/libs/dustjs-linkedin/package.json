@@ -3,7 +3,7 @@
     "filename": "dust-core.min.js",
     "version": "2.0.0",
     "description": "Asynchronous templates for the browser and node.js ( LinkedIn fork )",
-    "homepage": "http://linkedin.github.com/dustjs/",
+    "homepage": "http://linkedin.github.io/dustjs/",
     "keywords": [
        "template",
        "templating",

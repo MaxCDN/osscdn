@@ -16,7 +16,7 @@
     }
   ],
   "demos": [
-    "http://webpop.github.com/jquery.pin/"
+    "http://webpop.github.io/jquery.pin/"
   ],
   "bugs": "https://github.com/webpop/jquery.pin/issues",
   "repositories": [
@@ -31,5 +31,5 @@
       "url": "https://github.com/webpop/jquery.pin#license"
     }
   ],
-  "homepage": "http://webpop.github.com/jquery.pin/"
+  "homepage": "http://webpop.github.io/jquery.pin/"
 }

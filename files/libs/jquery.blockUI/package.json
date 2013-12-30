@@ -29,16 +29,16 @@
     "licenses": [
         {
             "type": "MIT",
-            "url": "http://malsup.github.com/mit-license.txt"
+            "url": "http://malsup.github.io/mit-license.txt"
         },
         {
             "type": "GPL",
-            "url": "http://malsup.github.com/gpl-license-v2.txt"
+            "url": "http://malsup.github.io/gpl-license-v2.txt"
         }
     ],
     "bugs": "https://github.com/malsup/blockui/issues",
     "docs": "http://jquery.malsup.com/block/",
-    "download": "http://malsup.github.com/jquery.blockUI.js",
+    "download": "http://malsup.github.io/jquery.blockUI.js",
     "dependencies": {
         "jquery": {
             "jquery": ">=1.7"

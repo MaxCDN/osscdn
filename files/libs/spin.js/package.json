@@ -7,16 +7,16 @@
   ],
   "description": "An animated CSS3 loading spinner with VML fallback for IE.",
   "version": "1.2.7",
-  "homepage": "http://fgnass.github.com/spin.js/",
-  "author": "Felix Gnass (http://fgnass.github.com/)",
+  "homepage": "http://fgnass.github.io/spin.js/",
+  "author": "Felix Gnass (http://fgnass.github.io/)",
   "maintainers": [
     {
       "name": "Felix Gnass",
-      "web": "http://fgnass.github.com/"
+      "web": "http://fgnass.github.io/"
     }
   ],
   "contributors": [
-    "Felix Gnass (http://fgnass.github.com/)"
+    "Felix Gnass (http://fgnass.github.io/)"
   ],
   "repository": {
     "type": "git",

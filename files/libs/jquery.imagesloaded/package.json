@@ -3,7 +3,7 @@
     "filename": "jquery.imagesloaded.min.js",
     "version": "3.0.4",
     "description": "jQuery plugin that triggers a callback after all images have been loaded",
-    "homepage": "http://desandro.github.com/imagesloaded/",
+    "homepage": "http://desandro.github.io/imagesloaded/",
     "keywords": [
         "images",
         "load",
@@ -21,7 +21,7 @@
     "repositories": [
         {
             "type": "git",
-            "url": "https://github.com/desandro/imagesloaded"
+            "url": "https://github.com/desandro/imagesloaded.git"
         }
     ]
 }

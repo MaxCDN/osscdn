@@ -3,7 +3,7 @@
   "description": "State-based routing for AngularJS",
   "version": "0.2.0",
   "filename": "angular-ui-router.min.js",
-  "homepage": "http://angular-ui.github.com/",
+  "homepage": "http://angular-ui.github.io/",
   "author": {
   "name": "Karsten Sperling",
     "url": "https://github.com/ksperling"

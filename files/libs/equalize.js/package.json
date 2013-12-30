@@ -12,7 +12,7 @@
         "layout"
     ],
     "homepage": "https://github.com/tsvensen/equalize.js",
-    "demo": "http://tsvensen.github.com/equalize.js/",
+    "demo": "http://tsvensen.github.io/equalize.js/",
     "dependencies": {
         "jquery": ">=1.4.x"
         },
