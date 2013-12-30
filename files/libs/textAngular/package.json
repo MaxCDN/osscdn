@@ -7,13 +7,13 @@
     "keywords": [
         "AngularJS",
         "text editor",
-	"WYSIWYG",
-	"directive"
+    "WYSIWYG",
+    "directive"
     ],
     "maintainers": [
         {
             "name": "Fraywing",
-	    "name": "SimeonC"
+        "name": "SimeonC"
         }
     ],
    "repositories": [

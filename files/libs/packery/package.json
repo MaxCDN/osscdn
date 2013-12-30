@@ -14,14 +14,14 @@
    "maintainers": [
        {
            "name": "David DeSandro",
-           "web": "http://desandro.com" 
-       } 
+           "web": "http://desandro.com"
+       }
    ],
    "repositories": [
        {
            "type": "git",
-           "url": "https://github.com/metafizzy/packery" 
-       } 
+           "url": "https://github.com/metafizzy/packery"
+       }
    ]
 
 }

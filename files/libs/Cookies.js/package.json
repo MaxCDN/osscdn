@@ -1,18 +1,20 @@
 {
-    "name": "Cookies.js",
-    "filename": "cookies.min.js",
-    "version": "0.3.1",
-    "description": "Cookies.js is a small client-side javascript library that makes managing cookies easy.",
-    "homepage": "https://github.com/ScottHamper/Cookies",
-    "keywords": [
-       "javascript",
-       "cookies"
-   ],
-   "repositories": [
-       {
-           "type": "git",
-           "url": "https://github.com/ScottHamper/Cookies.git"
-       }
-   ]
-
+  "name": "Cookies.js",
+  "filename": "cookies.min.js",
+  "version": "0.3.1",
+  "description": "Cookies.js is a small client-side javascript library that makes managing cookies easy.",
+  "homepage": "https://github.com/ScottHamper/Cookies",
+  "keywords": [
+    "javascript",
+    "cookies"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ScottHamper/Cookies.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ScottHamper/Cookies/issues"
+  },
+  "author": "Scott Hamper",
+  "license": "MIT"
 }

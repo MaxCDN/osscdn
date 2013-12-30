@@ -1,7 +1,16 @@
 {
-    "filename": "sly.min.js",
-    "name": "Sly",
-    "version": "1.2.1",
-    "description": "JavaScript library for one-directional scrolling with item based navigation support",
-    "homepage": "http://darsa.in/sly/"
+  "filename": "sly.min.js",
+  "name": "Sly",
+  "version": "1.2.1",
+  "description": "JavaScript library for one-directional scrolling with item based navigation support",
+  "homepage": "http://darsa.in/sly/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/darsain/sly.git"
+  },
+  "author": "darsain",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/darsain/sly/issues"
+  }
 }
