@@ -42,9 +42,9 @@ function walk(root, cb) {
                 return cb();
             }
 
-            var author = d.author;
+            var author = d.author || '';
 
-            if(author && author.name) {
+            if(author.name) {
                 author = author.name;
             }
 
@@ -52,9 +52,13 @@ function walk(root, cb) {
                 author = d.maintainers[0].name;
             }
 
+            if(Array.isArray(author)) {
+                author = author.join(', ');
+            }
+
             var gh = utils.parseGh(repoUrl);
             var ret = {
-                author: author,
+                author: author.split(' <')[0],
                 name: d.name,
                 version: d.version,
                 description: d.description,
