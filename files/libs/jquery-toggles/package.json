@@ -15,14 +15,14 @@
        {
            "name": "Simon Tabor",
            "email": "me@simontabor.com",
-           "web": "http://simontabor.com" 
-       } 
+           "web": "http://simontabor.com"
+       }
    ],
    "repositories": [
        {
            "type": "git",
-           "url": "https://github.com/simontabor/jquery-toggles" 
-       } 
+           "url": "https://github.com/simontabor/jquery-toggles"
+       }
    ]
 
 }
