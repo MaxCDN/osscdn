@@ -16,7 +16,7 @@ module.exports = {
 };
 
 function walk(root, cb) {
-    glob(path.join(root, '/**/package.json'), function(err, files) {
+    glob(path.join(root, '/*/package.json'), function(err, files) {
         if(err) {
             return console.error(err);
         }

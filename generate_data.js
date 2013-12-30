@@ -8,7 +8,7 @@ var utils = require('./walker/utils');
 function main() {
     var config = utils.getConfig('config.js');
 
-    var input = './files';
+    var input = './files/libs';
     var output = './frontend/app/data/';
 
     lib.walk(
