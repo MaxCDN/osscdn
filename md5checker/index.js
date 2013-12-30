@@ -1,4 +1,7 @@
 #!/usr/bin/env node
+
+'use strict';
+
 var fs = require('fs');
 var path = require('path');
 var crypto = require('crypto');
@@ -19,8 +22,12 @@ function main() {
         option('-c --cdn <url>', 'cdn url').
         parse(process.argv);
 
-    if(!program.input) return console.error('Missing input!');
-    if(!program.cdn) return console.error('Missing cdn!');
+    if(!program.input) {
+        return console.error('Missing input!');
+    }
+    if(!program.cdn) {
+        return console.error('Missing cdn!');
+    }
 
     check(program.input, program.cdn);
 }
@@ -30,16 +37,20 @@ function check(input, url) {
         fs.readFile(path.join(input, p), {
             encoding: 'utf-8'
         },function(err, d) {
-            if(err) return console.error(err);
+            if(err) {
+                return console.error(err);
+            }
 
             var fileHash = md5(d);
 
             request(trim.right(url, '/') + '/' + p, function(err, res, d) {
-                if(err) return console.error(err);
+                if(err) {
+                    return console.error(err);
+                }
 
                 var urlHash = md5(d);
 
-                if(fileHash != urlHash) {
+                if(fileHash !== urlHash) {
                     console.error('File and url hashes did not match for ' + p + '!');
                 }
             });
