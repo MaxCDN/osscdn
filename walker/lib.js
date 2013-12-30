@@ -67,6 +67,8 @@ function walk(root, cb) {
                 github: 'https://github.com/' + gh.user + '/' + gh.repo
             };
 
+            checkMissing(file, ret);
+
             var cdn = {};
             ret.cdn = cdn;
 
@@ -97,6 +99,14 @@ function walk(root, cb) {
 
             cb(null, d.filter(utils.id));
         });
+    });
+}
+
+function checkMissing(file, d) {
+    Object.keys(d).forEach(function(k) {
+        if(!d[k]) {
+            console.warn(file + ' is missing ' + k + ' field!');
+        }
     });
 }
 
