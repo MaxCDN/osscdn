@@ -102,7 +102,12 @@ nav > .list-inline > li {
     display: inline-block;
     margin-left: 0.25em;
     margin-right: 0.25em;
+    opacity: 0.8;
     vertical-align: middle;
+}
+
+.library .extras a:hover {
+    opacity: 1;
 }
 
 .library .files {
