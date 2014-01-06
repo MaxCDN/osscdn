@@ -81,7 +81,8 @@ nav > .list-inline > li {
 }
 
 .library .name {
-    display: inline;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .library .versionSelector {
@@ -89,7 +90,7 @@ nav > .list-inline > li {
 }
 
 .library .description {
-    margin: 1em 0.5em;
+    margin: 1em 0;
 }
 
 .library .extras .author {
@@ -182,9 +183,22 @@ nav > .list-inline > li {
     margin-bottom: 5px;
 }
 
+/* override base color */
+.github-fork-ribbon {
+    background-color: #007200;
+}
+
 @media (min-width: 992px) {
     header .col-md-8,
     nav > ul {
         text-align: right;
+    }
+
+    .library .extras {
+        text-align: right;
+    }
+
+    .library .description {
+        margin: 1em 0.5em;
     }
 }
