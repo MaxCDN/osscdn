@@ -6,6 +6,7 @@ var path = require('path');
 var glob = require('glob');
 var async = require('async');
 var walker = require('filewalker');
+var is = require('annois');
 
 var utils = require('./utils');
 
@@ -32,14 +33,13 @@ function walk(root, cb) {
 
                 repoUrl = d.repository.url? d.repository.url: d.repository;
             }
-            if(!repoUrl && d.homepage) {
-                repoUrl = d.homepage;
+
+            if(!repoUrl && is.object(d.repositories)) {
+                repoUrl = d.repositories.url;
             }
 
             if(!repoUrl) {
-                console.warn(d.name + ' is missing a repo!');
-
-                return cb();
+                console.warn(file + ' is missing a repo!');
             }
 
             var author = d.author || '';
@@ -56,14 +56,14 @@ function walk(root, cb) {
                 author = author.join(', ');
             }
 
-            var gh = utils.parseGh(repoUrl);
+            var gh = repoUrl && utils.parseGh(repoUrl);
             var ret = {
                 author: author.split(' <')[0],
                 name: d.name,
                 version: d.version,
                 description: d.description,
                 homepage: d.homepage,
-                github: 'https://github.com/' + gh.user + '/' + gh.repo
+                github: gh && 'https://github.com/' + gh.user + '/' + gh.repo
             };
 
             checkMissing(file, ret);
