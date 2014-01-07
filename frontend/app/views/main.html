@@ -28,7 +28,7 @@
         <div class="col-md-6">
           <div class="extras">
             <span class="author">{{library.author}}</span>
-            <a class="github" href="{{library.github}}"><i class="fa fa-github fa-2x"></i></a>
+            <a ng-if="library.github" class="github" href="{{library.github}}"><i class="fa fa-github fa-2x"></i></a>
             <a class="homepage" href="{{library.homepage}}"><i class="fa fa-globe fa-2x"></i></a>
           </div>
         </div>
