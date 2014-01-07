@@ -9,11 +9,11 @@
   "main": "./lib.js",
   "author": "Juho Vepsalainen",
   "dependencies": {
+    "annois": "~0.3.0",
     "async": "~0.2.9",
     "filewalker": "~0.1.2",
     "glob": "~3.2.7",
-    "trimmer": "~0.0.3",
-    "annois": "~0.3.0"
+    "trimmer": "~0.0.3"
   },
   "devDependencies": {
     "suite.js": "~0.6.0"
