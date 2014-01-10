@@ -189,7 +189,6 @@ nav > .list-inline > li {
 }
 
 @media (min-width: 992px) {
-    header .col-md-8,
     nav > ul {
         text-align: right;
     }
