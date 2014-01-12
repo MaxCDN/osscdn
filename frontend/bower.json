@@ -8,10 +8,16 @@
     "angular-route": "1.2.7",
     "angular-ui-router": "~0.2.7",
     "es5-shim": "~2.3.0",
-    "github-fork-ribbon-css": "~0.1.0"
+    "github-fork-ribbon-css": "~0.1.0",
+    "ng-clip": "~0.0.2",
+    "zeroclipboard": "~1.2.3",
+    "angular-flash": "~0.1.11"
   },
   "devDependencies": {
     "angular-mocks": "1.2.7",
     "angular-scenario": "1.2.7"
+  },
+  "resolutions": {
+    "angular": "1.2.7"
   }
 }

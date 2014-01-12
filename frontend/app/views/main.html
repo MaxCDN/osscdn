@@ -1,9 +1,13 @@
+<div flash-alert="success" active-class="in" class="alert fade">
+    <strong class="alert-heading">Woohoo!</strong>
+    <span class="alert-message">{{flash.message}}</span>
+</div>
+
 <div class="row">
   <div class="col-md-12">
     <input class="form-control input-lg" type="text" ng-model="search.name" ng-keydown="limit=10" autofocus placeholder="Search">
   </div>
 </div>
-
 
 <div class="loader" ng-hide="libraries">
   <p><i class="fa fa-spinner fa-2x fa-spin"></i> Loading...</p>
@@ -44,9 +48,7 @@
       <ul class="versions">
         <li class="version" ng-repeat="(version, files) in library.cdn" ng-if="library.selectedVersion.value == version">
           <ul class="files" ng-class="{full: library.showing}">
-            <li class="file" ng-repeat="file in files track by $index">
-              <a href="//oss.maxcdn.com/libs/{{library.name}}/{{version}}/{{file}}">//oss.maxcdn.com/libs/{{library.name}}/{{version}}/{{file}}</a>
-            </li>
+            <li class="file" ng-repeat="file in files track by $index"><code>//oss.maxcdn.com/libs/{{library.name}}/{{version}}/{{file}}</code> <button class="pull-right btn btn-default btn-xs" clip-copy="library.name" clip-click="copied()"><i class="glyphicon glyphicon-paperclip"></i></button></li>
           </ul>
         </li>
       </ul>

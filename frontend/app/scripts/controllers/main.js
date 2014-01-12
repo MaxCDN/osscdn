@@ -1,9 +1,10 @@
 'use strict';
 
-angular.module('osscdnApp').controller('MainCtrl', function ($scope, $http, $state) {
+angular.module('osscdnApp').controller('MainCtrl', function ($scope, $http, $state, flash) {
     $scope.search = {};
     $scope.libraries = [];
     $scope.limit = 10;
+    $scope.demo = [1, 2, 3];
 
     $http.get('data/index.json').then(function(res) {
         $scope.libraries = res.data;
@@ -40,6 +41,20 @@ angular.module('osscdnApp').controller('MainCtrl', function ($scope, $http, $sta
         var version = library.selectedVersion.value;
 
         return library.cdn[version].length > 6;
+    };
+
+    $scope.copy = function(demo, item, index) {
+        console.log(demo, item, index);
+    };
+
+    $scope.getCopyLink = function(library, version, file) {
+console.log(library, version, file);
+
+        return '//oss.maxcdn.com/libs/' + library + '/' + version + '/' + file;
+    };
+
+    $scope.copied = function() {
+        flash.success = 'Copied to clipboard';
     };
 
     function getLibrary(library) {
