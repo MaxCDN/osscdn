@@ -48,7 +48,7 @@ angular.module('osscdnApp').controller('MainCtrl', function ($scope, $http, $sta
     };
 
     $scope.getCopyLink = function(library, version, file) {
-console.log(library, version, file);
+        console.log(library, version, file);
 
         return '//oss.maxcdn.com/libs/' + library + '/' + version + '/' + file;
     };
