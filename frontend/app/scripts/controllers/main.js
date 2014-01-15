@@ -4,7 +4,6 @@ angular.module('osscdnApp').controller('MainCtrl', function ($scope, $http, $sta
     $scope.search = {};
     $scope.libraries = [];
     $scope.limit = 10;
-    $scope.demo = [1, 2, 3];
 
     $http.get('data/index.json').then(function(res) {
         $scope.libraries = res.data;
@@ -47,10 +46,8 @@ angular.module('osscdnApp').controller('MainCtrl', function ($scope, $http, $sta
         console.log(demo, item, index);
     };
 
-    $scope.getCopyLink = function(library, version, file) {
-        console.log(library, version, file);
-
-        return '//oss.maxcdn.com/libs/' + library + '/' + version + '/' + file;
+    $scope.getCDNLink = function(name, version, file) {
+        return '//oss.maxcdn.com/libs/' + name + '/' + version + '/' + file;
     };
 
     $scope.copied = function() {

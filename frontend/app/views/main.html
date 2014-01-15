@@ -49,8 +49,8 @@
         <li class="version" ng-repeat="(version, files) in library.cdn" ng-if="library.selectedVersion.value == version">
           <ul class="files" ng-class="{full: library.showing}">
             <li class="file" ng-repeat="file in files track by $index">
-              <code>//oss.maxcdn.com/libs/{{library.name}}/{{version}}/{{file}}</code>
-              <button class="pull-right btn btn-default btn-xs" clip-copy="library.name" clip-click="copied()">
+              <code>{{getCDNLink(library.name, version, file)}}</code>
+              <button class="pull-right btn btn-default btn-xs" clip-copy="getCDNLink(library.name, version, file)" clip-click="copied()">
                 <i class="fa fa-files-o"></i>
               </button>
             </li>
