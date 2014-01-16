@@ -1,7 +1,7 @@
 # Open Source Software CDN [![Build Status](https://travis-ci.org/MaxCDN/osscdn.png?branch=master)](https://travis-ci.org/MaxCDN/osscdn)
 
-OSSCDN is a free CDN powered by [MaxCDN](http://www.maxcdn.com)
-that hosts all kinds of Open Source projects.
+OSSCDN is a free [CDN](http://en.wikipedia.org/wiki/Content_delivery_network)
+powered by [MaxCDN](http://www.maxcdn.com) that hosts all kinds of Open Source projects.
 
 This includes, but not limited to, JS libraries, jQuery plugins, Linux Mirrors,
 executable files and more.
