@@ -14,12 +14,12 @@
     <div class="library" ng-repeat="library in libraries | filter:search | orderBy:orderByName | limitTo:limit | as:'libraries.filtered'" repeat-done="getLibraries">
       <div class="row">
         <div class="col-md-6">
-          <h4 class="name"><a href="/#/{{library.name}}">{{library.name}}</a></h4>
+          <h4 class="name">
+            <a href="/#/{{library.name}}">{{library.name}}</a>
+          </h4>
 
           <div class="btn-group versionSelector">
-            <a href="" title=""
-                dropdown-select="library.versions"
-                dropdown-model="library.selectedVersion">
+            <a href="#" dropdown-select="library.versions" dropdown-model="library.selectedVersion">
                 Versions <i class="fa fa-caret-down"></i>
             </a>
           </div>
@@ -28,8 +28,12 @@
         <div class="col-md-6">
           <div class="extras">
             <span class="author">{{library.author}}</span>
-            <a ng-if="library.github" class="github" href="{{library.github}}" target="_blank"><i class="fa fa-github fa-2x"></i></a>
-            <a class="homepage" href="{{library.homepage}}" target="_blank"><i class="fa fa-globe fa-2x"></i></a>
+            <a ng-if="library.github" class="github" href="{{library.github}}">
+              <i class="fa fa-github fa-2x"></i>
+            </a>
+            <a class="homepage" href="{{library.homepage}}">
+              <i class="fa fa-globe fa-2x"></i>
+            </a>
           </div>
         </div>
       </div> <!-- row -->
@@ -40,7 +44,9 @@
       <ul class="versions">
         <li class="version" ng-repeat="(version, files) in library.cdn" ng-if="library.selectedVersion.value == version">
           <ul class="files" ng-class="{full: library.showing}">
-            <li class="file" ng-repeat="file in files track by $index"><a href="//oss.maxcdn.com/libs/{{library.name}}/{{version}}/{{file}}" target="_blank">//oss.maxcdn.com/libs/{{library.name}}/{{version}}/{{file}}</a></li>
+            <li class="file" ng-repeat="file in files track by $index">
+              <a href="//oss.maxcdn.com/libs/{{library.name}}/{{version}}/{{file}}">//oss.maxcdn.com/libs/{{library.name}}/{{version}}/{{file}}</a>
+            </li>
           </ul>
         </li>
       </ul>
