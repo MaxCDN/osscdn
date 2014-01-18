@@ -45,7 +45,6 @@ nav > .list-inline > li {
     position: fixed;
     z-index: 1000;
     top: 1em;
-    left: 1em;
 }
 
 .logo {
