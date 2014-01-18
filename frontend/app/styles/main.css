@@ -41,6 +41,13 @@ nav > .list-inline > li {
 }
 /* Bootstrap overrides end */
 
+.alert {
+    position: fixed;
+    z-index: 1000;
+    top: 1em;
+    left: 1em;
+}
+
 .logo {
     margin-bottom: 10px;
 }
