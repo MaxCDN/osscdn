@@ -152,6 +152,20 @@ module.exports = function (grunt) {
                 report: 'min'
             }
         },
+        htmlmin: {
+            dist: {
+                options: {
+                    collapseWhitespace: true,
+                    removeComments: true
+                },
+                files: [{
+                    expand: true,
+                    cwd: '<%= yeoman.dist %>',
+                    src: '**/*.html',
+                    dest: '<%= yeoman.dist %>'
+                }]
+            }
+        },
         // Put files not handled in other tasks here
         copy: {
             dist: {
@@ -231,7 +245,8 @@ module.exports = function (grunt) {
         'uglify',
         'uglify:scripts',
         'rev',
-        'usemin'
+        'usemin',
+        'htmlmin'
     ]);
 
     grunt.registerTask('default', [
