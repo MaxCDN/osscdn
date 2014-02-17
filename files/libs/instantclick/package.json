@@ -1,0 +1,23 @@
+{
+    "name": "instantclick",
+    "filename": "instantclick.js",
+    "version": "2.1",
+    "description": "InstantClick makes following links in your website instant.",
+    "homepage": "https://github.com/dieulot/instantclick",
+    "keywords": [
+       "instant",
+       "speed"
+   ],
+   "maintainers": [
+       {
+           "name": "Alex Dieulot",
+           "web": "https://github.com/dieulot"
+       }
+   ],
+   "repositories": [
+       {
+           "type": "git",
+           "url": "https://github.com/dieulot/instantclick.git"
+       }
+   ]
+}
