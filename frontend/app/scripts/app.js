@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('osscdnApp', ['ngAnimate', 'ui.router', 'ngDropdowns',
+angular.module('osscdnApp', ['ngAnimate', 'ui.router', 'ngDropdowns', 'semverSort',
     'ngClipboard', 'angular-flash.service', 'angular-flash.flash-alert-directive']).
     value('ZeroClipboardConfig', {
         path: 'bower_components/zeroclipboard/ZeroClipboard.swf'

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('osscdnApp').controller('MainCtrl', function ($scope, $http, $state, flash) {
+angular.module('osscdnApp').controller('MainCtrl', function($scope, $http, $state, $filter, flash) {
     $scope.search = {};
     $scope.libraries = [];
     $scope.limit = 10;
@@ -67,7 +67,9 @@ angular.module('osscdnApp').controller('MainCtrl', function ($scope, $http, $sta
                 library[k] = d[k];
             }
 
-            library.versions = Object.keys(library.cdn).map(function(version) {
+            library.cdn = semverize(library.cdn);
+
+            library.versions = $filter('semverSort')(Object.keys(library.cdn)).map(function(version) {
                 return {
                     text: version,
                     value: version
@@ -76,6 +78,24 @@ angular.module('osscdnApp').controller('MainCtrl', function ($scope, $http, $sta
 
             library.selectedVersion = library.versions[0];
         });
+    }
+
+    function semverize(ob) {
+        // x.y -> x.y.0
+        var ret = {};
+
+        Object.keys(ob).forEach(function(v) {
+            var parts = v.split('.');
+
+            if(parts && parts.length === 2) {
+                ret[v + '.0'] = ob[v];
+            }
+            else {
+                ret[v] = ob[v];
+            }
+        });
+
+        return ret;
     }
 });
 
