@@ -1,7 +1,7 @@
 {
     "name": "tinymce",
-    "filename": "tiny_mce.js",
-    "version": "3.5.8",
+    "filename": "tinymce.js",
+    "version": "4.0.16",
     "description": "TinyMCE is a platform independent web based Javascript HTML WYSIWYG editor",
     "homepage": "http://www.tinymce.com",
     "keywords": [
