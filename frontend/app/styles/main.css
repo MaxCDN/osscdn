@@ -51,6 +51,10 @@ nav > .list-inline > li {
     margin-bottom: 10px;
 }
 
+.logo + div {
+    z-index: 1002;
+}
+
 .extra {
     margin-top: 1em;
 }
