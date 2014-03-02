@@ -49,7 +49,7 @@ angular.module('osscdnApp').controller('MainCtrl', function($scope, $http, $stat
     };
 
     $scope.getCDNLink = function(name, version, file) {
-        return '//oss.maxcdn.com/libs/' + name + '/' + version + '/' + file;
+        return '//oss.maxcdn.com/' + name + '/' + version + '/' + file;
     };
 
     $scope.copied = function() {
