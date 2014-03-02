@@ -7,21 +7,9 @@ This includes, but not limited to, JS libraries, jQuery plugins, Linux Mirrors,
 executable files and more.
 
 
-## Submission Process
+## [Submit files](https://github.com/jsdelivr/jsdelivr#how-to-submit-or-update-projects)
 
-### Rules
 
-* All filenames and directories should be lowercase.
-* No spaces are allowed.
-* Follow existing structure and be consistent with other projects.
-
-### Pull Requests
-1. Fork the repository
-2. Add or Update the project you wish following the rules and file structure.
-3. Send a Pull Request including a description
-
-### Other
-* If you wish to host files larger than 10MB please contact [Justin](https://github.com/jdorfman) or [Dmitriy](https://github.com/jimaek).
 
 
 ## Development
@@ -33,9 +21,8 @@ The instructions below show how to get project dependencies installed and the pr
 3. The frontend relies on [Grunt](http://gruntjs.com/) for various tasks. Install the terminal client using `npm install grunt-cli -g`. After this you should have `grunt` command available.
 4. Execute `npm install` at frontend/
 5. Execute `bower install` at frontend/
-6. Execute `node ./generate_data.js` at project root. This will output some data for frontend to use.
-7. Execute `cd frontend`
-8. Execute `grunt server`. This will run a development server and open the app in your browser. As you make changes to the project it will refresh the browser automatically.
+6. Execute `cd frontend`
+7. Execute `grunt server`. This will run a development server and open the app in your browser. As you make changes to the project it will refresh the browser automatically.
 
 ### Production Server
 
