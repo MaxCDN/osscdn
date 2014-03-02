@@ -26,28 +26,16 @@ executable files and more.
 
 ## Development
 
-The project has been separated in the following distinct parts:
-
-* files/ - The files served by the CDN.
-* frontend/ - The frontend served at osscdn.com
-* md5checker/ - A utility script that can be used to verify md5 checksums of the files at the CDN and at the repository
-* walker/ - A utility script that constructs data used by the frontend based on files served there
-
-Usually a directory contains a README.md describing its contents in further detail.
-
-### Getting the Project Running
-
 The instructions below show how to get project dependencies installed and the project running:
 
 1. Make sure you have a recent version of [Node.js](http://nodejs.org/) installed. It should include NPM, a package control by default. We'll use that to fetch our dependencies.
 2. In addition you are going to require [Bower](http://bower.io/). That will be used to deal with some of the frontend dependencies. Install it using npm like this `npm install bower -g`. After that you should have `bower` command available.
 3. The frontend relies on [Grunt](http://gruntjs.com/) for various tasks. Install the terminal client using `npm install grunt-cli -g`. After this you should have `grunt` command available.
-4. Execute `npm install` at walker/
-5. Execute `npm install` at frontend/
-6. Execute `bower install` at frontend/
-7. Execute `node ./generate_data.js` at project root. This will output some data for frontend to use.
-8. Execute `cd frontend`
-9. Execute `grunt server`. This will run a development server and open the app in your browser. As you make changes to the project it will refresh the browser automatically.
+4. Execute `npm install` at frontend/
+5. Execute `bower install` at frontend/
+6. Execute `node ./generate_data.js` at project root. This will output some data for frontend to use.
+7. Execute `cd frontend`
+8. Execute `grunt server`. This will run a development server and open the app in your browser. As you make changes to the project it will refresh the browser automatically.
 
 ### Production Server
 
