@@ -5,7 +5,9 @@ angular.module('osscdnApp').controller('MainCtrl', function($scope, $http, $stat
     $scope.libraries = [];
     $scope.limit = 10;
 
-    $http.get('data/index.json').then(function(res) {
+    var root = 'http://api.jsdelivr.com/v1/jsdelivr/libraries';
+
+    $http.get(root + '?fields=name').then(function(res) {
         $scope.libraries = res.data;
 
         if($state.params.name) {
@@ -59,13 +61,18 @@ angular.module('osscdnApp').controller('MainCtrl', function($scope, $http, $stat
             return;
         }
 
-        $http.get('data/' + library.name + '.json').then(function(res) {
-            var d = res.data;
+        $http.get(root + '/' + library.name +
+                '?fields=author,name,description,homepage,assets').then(function(res) {
+            var d = res.data[0];
             var k;
 
             for(k in d) {
                 library[k] = d[k];
             }
+
+            // XXX: convert assets to cdn format
+            library.cdn = convertAssets(library.assets);
+            delete library.assets;
 
             library.cdn = semverize(library.cdn);
 
@@ -78,6 +85,16 @@ angular.module('osscdnApp').controller('MainCtrl', function($scope, $http, $stat
 
             library.selectedVersion = library.versions[0];
         });
+    }
+
+    function convertAssets(arr) {
+        var ret = {};
+
+        arr.forEach(function(v) {
+            ret[v.version] = v.files;
+        });
+
+        return ret;
     }
 
     function semverize(ob) {
