@@ -5,6 +5,7 @@
 
 var path = require('path');
 var express = require('express');
+var h5bp = require('h5bp');
 
 
 main();
@@ -19,6 +20,7 @@ function main() {
         app.set('port', port);
 
         app.use(express.logger('dev'));
+        app.use(h5bp({root: path.join(__dirname, 'dist')}));
         app.use(express.compress());
         app.use(express['static'](path.join(__dirname, 'dist'), {
             maxAge: halfDay
