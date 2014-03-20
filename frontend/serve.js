@@ -7,6 +7,8 @@ var path = require('path');
 var express = require('express');
 var h5bp = require('h5bp');
 
+var staticMw = express['static'];
+
 
 main();
 
@@ -15,6 +17,8 @@ function main() {
 
     var port = process.env.PORT || 8000;
     var halfDay = 43200000;
+    var day = halfDay * 2;
+    var week = day * 7;
 
     app.configure(function() {
         app.set('port', port);
@@ -22,9 +26,6 @@ function main() {
         app.use(express.logger('dev'));
         app.use(h5bp({root: path.join(__dirname, 'dist')}));
         app.use(express.compress());
-        app.use(express['static'](path.join(__dirname, 'dist'), {
-            maxAge: halfDay
-        }));
 
         app.use(app.router);
     });
@@ -32,6 +33,13 @@ function main() {
     app.configure('development', function() {
         app.use(express.errorHandler());
     });
+
+    app.use('/dist/scripts', staticMw({maxAge: week}));
+    app.use('/dist/styles', staticMw({maxAge: week}));
+
+    app.use(staticMw(path.join(__dirname, 'dist'), {
+        maxAge: halfDay
+    }));
 
     app.use(function(req, res) {
         res.sendfile(__dirname + '/dist/index.html');
