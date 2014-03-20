@@ -11,7 +11,7 @@ angular.module('osscdnApp', ['ngAnimate', 'ui.router', 'ngDropdowns', 'semverSor
             controller: 'MainCtrl'
         });
 
-        ngClipProvider.setPath('//oss.maxcdn.com/libs/zeroclipboard/1.3.1/ZeroClipboard.swf');
+        ngClipProvider.setPath('//oss.maxcdn.com/zeroclipboard/1.3.3/ZeroClipboard.swf');
 
         flashProvider.successClassnames.push('alert-success');
     });
