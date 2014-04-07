@@ -90,6 +90,10 @@ angular.module('osscdnApp').controller('MainCtrl', function($scope, $http, $stat
     function convertAssets(arr) {
         var ret = {};
 
+        if(!arr) {
+            return ret;
+        }
+
         arr.forEach(function(v) {
             ret[v.version] = v.files;
         });
