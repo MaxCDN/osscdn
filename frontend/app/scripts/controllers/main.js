@@ -8,7 +8,12 @@ angular.module('osscdnApp').controller('MainCtrl', function($scope, $http, $stat
     var root = 'http://api.jsdelivr.com/v1/jsdelivr/libraries';
 
     $http.get(root + '?fields=name').then(function(res) {
-        $scope.libraries = res.data;
+        // attach random keys needed by random sorting
+        $scope.libraries = res.data.map(function(lib) {
+            lib.randomKey = parseInt(Math.random() * 1000, 10);
+
+            return lib;
+        });
 
         if($state.params.name) {
             $scope.search.name = $state.params.name;
@@ -21,7 +26,8 @@ angular.module('osscdnApp').controller('MainCtrl', function($scope, $http, $stat
             return library.name.length;
         }
 
-        return library.name;
+        // use random order in case no search query exists
+        return library.randomKey;
     };
 
     $scope.getLibraries = function() {
