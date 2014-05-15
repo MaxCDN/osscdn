@@ -80,11 +80,9 @@ angular.module('osscdnApp').controller('MainCtrl', function($scope, $http, $stat
             library.cdn = convertAssets(library.assets);
             delete library.assets;
 
-            library.cdn = semverize(library.cdn);
-
             library.versions = $filter('semverSort')(Object.keys(library.cdn)).map(function(version) {
                 return {
-                    text: version,
+                    text: semverize(version),
                     value: version
                 };
             }).reverse();
@@ -107,22 +105,15 @@ angular.module('osscdnApp').controller('MainCtrl', function($scope, $http, $stat
         return ret;
     }
 
-    function semverize(ob) {
+    function semverize(str) {
         // x.y -> x.y.0
-        var ret = {};
+        var parts = str.split('.');
 
-        Object.keys(ob).forEach(function(v) {
-            var parts = v.split('.');
+        if(parts && parts.length === 2) {
+            return str + '.0';
+        }
 
-            if(parts && parts.length === 2) {
-                ret[v + '.0'] = ob[v];
-            }
-            else {
-                ret[v] = ob[v];
-            }
-        });
-
-        return ret;
+        return str;
     }
 });
 
