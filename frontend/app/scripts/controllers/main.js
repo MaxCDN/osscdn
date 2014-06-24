@@ -87,7 +87,7 @@ angular.module('osscdnApp').controller('MainCtrl', function($scope, $http, $stat
                 };
             }).reverse();
 
-            library.selectedVersion = library.versions[0];
+            library.selectedVersion = angular.copy(library.versions[0]);
         });
     }
 
