@@ -41,7 +41,12 @@ nav > .list-inline > li {
 }
 /* Bootstrap overrides end */
 
+.alert.fade.in {
+    visibility: visible;
+}
+
 .alert {
+    visibility: hidden;
     position: fixed;
     z-index: 1005;
     top: 1em;
